@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+#export DESKTOPINTEGRATION=false
+linuxqq \
+  --enable-features=UseOzonePlatform \
+  --ozone-platform=wayland \
+  --use-gl=desktop \
+  --enable-features=WaylandLinuxDrmSyncobj
