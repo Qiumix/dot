@@ -3,3 +3,9 @@
 
 # not ignore .gitignore
 !.gitignore
+
+!vim/
+
+!zsh/
+
+!zsh-abbr/
