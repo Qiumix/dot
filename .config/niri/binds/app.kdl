@@ -1,0 +1,24 @@
+binds {
+    // Support Softwares' Shortcut
+    Mod+Shift+T repeat=false hotkey-overlay-title="Open a Terminal" {
+        spawn-sh "foot"
+    }
+    Mod+T repeat=false hotkey-overlay-title="Open a Terminal" {
+        spawn-sh "kitty -1"
+    }
+    Mod+D hotkey-overlay-title="Run an Application: fuzzel" {
+        spawn-sh "fuzzel"
+    }
+    Mod+Shift+D hotkey-overlay-title="Toggle Darkmode" {
+        spawn-sh "darkman toggle"
+    }
+    Mod+V hotkey-overlay-title="Open a clipboard Manager" {
+        spawn-sh "cliphist-fuzzel-img"
+    }
+    Mod+F1 hotkey-overlay-title="Pick Color Or Zoom Screen" {
+        spawn-sh "shmooz"
+    }
+    Ctrl+Shift+F1 {
+        spawn-sh "way-record"
+    }
+}

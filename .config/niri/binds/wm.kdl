@@ -1,0 +1,115 @@
+// Windows Switch
+binds {
+    Mod+F {
+        maximize-column
+    }
+    Mod+Shift+F {
+        fullscreen-window
+    }
+    Mod+H {
+        focus-column-left
+    }
+    Mod+J {
+        focus-window-or-workspace-down
+    }
+    Mod+K {
+        focus-window-or-workspace-up
+    }
+    Mod+L {
+        focus-column-right
+    }
+    Mod+left {
+        focus-column-left
+    }
+    Mod+down {
+        focus-window-or-workspace-down
+    }
+    Mod+up {
+        focus-window-or-workspace-up
+    }
+    Mod+right {
+        focus-column-right
+    }
+    // Windows Move
+    Mod+Ctrl+H {
+        move-column-left
+    }
+    Mod+Ctrl+J {
+        move-column-to-workspace-down
+    }
+    Mod+Ctrl+K {
+        move-column-to-workspace-up
+    }
+    Mod+Ctrl+L {
+        move-column-right
+    }
+    Mod+Ctrl+left {
+        move-column-left
+    }
+    Mod+Ctrl+down {
+        move-column-to-workspace-down
+    }
+    Mod+Ctrl+up {
+        move-column-to-workspace-up
+    }
+    Mod+Ctrl+right {
+        move-column-right
+    }
+    // Windows Tiling
+    Mod+Shift+K {
+        move-window-up
+    }
+    Mod+Shift+J {
+        move-window-down
+    }
+    Mod+Shift+H {
+        consume-or-expel-window-left
+    }
+    Mod+Shift+L {
+        consume-or-expel-window-right
+    }
+    Mod+Shift+up {
+        move-window-up
+    }
+    Mod+Shift+down {
+        move-window-down
+    }
+    Mod+Shift+left {
+        consume-or-expel-window-left
+    }
+    Mod+Shift+right {
+        consume-or-expel-window-right
+    }
+    // Windows Management
+    Mod+O repeat=false {
+        toggle-overview
+    }
+    Mod+Q repeat=false {
+        close-window
+    }
+    Mod+G {
+        toggle-column-tabbed-display
+    }
+    Mod+Return {
+        toggle-window-floating
+    }
+    Mod+Minus {
+        set-column-width "-10%"
+    }
+    Mod+Equal {
+        set-column-width "+10%"
+    }
+    Mod+Alt+Minus {
+        set-column-width "-0.1%"
+    }
+    Mod+Alt+Equal {
+        set-column-width "+0.1%"
+    }
+    Mod+Shift+Minus {
+        set-window-height "-10%"
+    }
+    Mod+Shift+Equal {
+        set-window-height "+10%"
+    }
+}
+

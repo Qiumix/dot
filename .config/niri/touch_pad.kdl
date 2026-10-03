@@ -1,0 +1,15 @@
+input {
+  touchpad {
+    // off
+    accel-profile "adaptive"
+    accel-speed 1.0
+    scroll-factor 0.7
+    natural-scroll
+    tap
+    dwt
+    // ignore touchpad while typing    dwtp
+    drag true
+    drag-lock
+    click-method "clickfinger"
+  }
+}

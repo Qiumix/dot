@@ -1,0 +1,18 @@
+window-rule {
+    match app-id="top.imsyy.splayer_next"
+    open-maximized true
+    open-fullscreen true
+}
+// splayer_next's lyric window
+window-rule {
+    match app-id="top.imsyy.splayer_next" title="SPlayer-Next - Desktop Lyric"
+    background-effect {
+        xray false
+        blur false
+    }
+    default-floating-position x=960 y=880
+    open-fullscreen false
+    open-maximized false
+    open-floating true
+}
+

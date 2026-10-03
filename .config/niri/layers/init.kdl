@@ -1,0 +1,13 @@
+layer-rule {
+    popups {
+        opacity 0.6
+        background-effect {
+            blur true
+            xray false
+        }
+        geometry-corner-radius 8
+    }
+}
+include optional=true "~/.config/niri/layers/bg.kdl"
+include optional=true "~/.config/niri/layers/dms.kdl"
+include optional=true "~/.config/niri/layers/blur.kdl"
