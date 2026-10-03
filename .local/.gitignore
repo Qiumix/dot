@@ -5,3 +5,7 @@
 !.gitignore
 
 !bin
+
+!share
+/share/*
+!share/darkman
