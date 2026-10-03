@@ -1,0 +1,630 @@
+@import "../colors.css";
+
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  outline: none;
+  font-family: sans-serif;
+  font-size: 14px;
+  min-height: 28px;
+}
+
+window {
+  background-color: rgba(0, 0, 0, 0.75);
+  color: @on-surface;
+}
+
+.bluetooth,
+.volume,
+.brightness,
+.custom-battery,
+.clock,
+.cava,
+.longshot,
+.workspaces .item,
+#prev,
+.play-pause,
+#next,
+.tray,
+#power {
+  margin: 3px 3px;
+  border-radius: 24px;
+
+  background-image:
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.1) 0%,
+      rgba(255, 255, 255, 0) 44%,
+      rgba(0, 0, 0, 0.08) 100%
+    ),
+    linear-gradient(
+      115deg,
+      alpha(@primary, 0.32) 0%,
+      alpha(@contrary, 0.2) 20%,
+      alpha(@surface-variant, 0.08) 40%,
+      alpha(@tertiary, 0.28) 60%,
+      alpha(@tertiary, 0.12) 75%,
+      alpha(@contrary, 0.28) 88%,
+      alpha(@primary, 0.24) 100%
+    );
+  background-repeat: no-repeat;
+  background-size:
+    180% 180%,
+    300% 300%;
+  background-position:
+    0% 0%,
+    0% 20%;
+  background-color: alpha(@surface, 0.8);
+
+  outline: 1px solid alpha(@on-surface, 0.14);
+  outline-offset: -1px;
+  box-shadow:
+    inset 1.5px 1.5px 1px alpha(@primary, 0.42),
+    inset -1.5px -1.5px 1px alpha(@tertiary, 0.34),
+    0 2px 6px rgba(0, 0, 0, 0.25),
+    0 0 8px alpha(@tertiary, 0),
+    0 0 8px alpha(@contrary, 0);
+  transform: scale(1) translateY(0);
+
+  transition:
+    background-position 0.44s cubic-bezier(0.4, 0, 0.2, 1),
+    outline-color 0.28s ease,
+    transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1),
+    color 0.3s ease;
+}
+
+.bluetooth:hover,
+.volume:hover,
+.brightness:hover,
+.custom-battery:hover,
+.clock:hover,
+.cava:hover,
+.longshot:hover,
+.workspaces .item:hover,
+#prev:hover,
+.play-pause:hover,
+#next:hover,
+#power:hover {
+  color: @contrary;
+  background-position:
+    100% 100%,
+    100% 80%;
+  outline-color: alpha(@contrary, 0.62);
+  box-shadow:
+    inset 1.5px 1.5px 1px alpha(@tertiary, 0.62),
+    inset -1.5px -1.5px 1px alpha(@primary, 0.58),
+    0 4px 10px rgba(0, 0, 0, 0.28),
+    0 0 8px alpha(@tertiary, 0.09),
+    0 0 8px alpha(@contrary, 0.18);
+  transform: scale(1.1) translateY(1px);
+  transition:
+    background-position 0.24s cubic-bezier(0.2, 0, 0, 1),
+    outline-color 0.28s ease,
+    transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1),
+    color 0.3s ease;
+}
+
+.bluetooth:active,
+.volume:active,
+.brightness:active,
+.custom-battery:active,
+.clock:active,
+.cava:active,
+.longshot:active,
+.workspaces .item:active,
+#prev:active,
+.play-pause:active,
+#next:active,
+#power:active {
+  background:
+    linear-gradient(180deg, rgba(0, 0, 0, 0.08) 0%, rgba(0, 0, 0, 0) 40%),
+    linear-gradient(
+      135deg,
+      alpha(@surface-variant, 0.4) 0%,
+      alpha(@surface-variant, 0.18) 50%,
+      alpha(@surface-variant, 0.28) 100%
+    );
+
+  text-shadow: none;
+  outline-color: alpha(@surface-variant, 0.55);
+  box-shadow:
+    inset 0 3px 5px rgba(0, 0, 0, 0.22),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.08),
+    0 1px 3px rgba(0, 0, 0, 0.1),
+    0 0 8px alpha(@tertiary, 0),
+    0 0 8px alpha(@contrary, 0);
+  transform: scale(0.93) translateY(1.5px);
+  transition:
+    background 0.1s ease,
+    transform 0.1s cubic-bezier(0.25, 1, 0.35, 1);
+}
+
+.bluetooth {
+  padding: 0 18px 0 18px;
+  color: @primary;
+  font-size: 18px;
+}
+.custom-battery {
+  padding: 0 14px 0 10px;
+  color: @primary;
+  min-width: 55px;
+}
+.clock {
+  padding: 0 14px;
+  color: @primary;
+  min-width: 40px;
+}
+.volume {
+  padding: 0 16px;
+  color: @primary;
+  min-width: 45px;
+}
+.longshot {
+  padding: 0 20px 0 16px;
+  color: @primary;
+  font-size: 16px;
+}
+.brightness {
+  padding: 0 17px 0 17px;
+  color: @primary;
+  font-size: 16px;
+}
+.cava {
+  padding: 0 24px;
+  color: @primary;
+  font-weight: bold;
+  letter-spacing: -1px;
+}
+
+.custom-battery,
+.volume,
+.clock,
+.workspaces .item,
+.workspaces .item label,
+tooltip,
+tooltip label,
+popover > contents {
+  font-family: sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.7px;
+}
+
+.workspaces {
+  margin: 1px 6px;
+  padding: 3px;
+  background: transparent;
+  border-radius: 28px;
+  outline: 1.5px solid alpha(@tertiary, 0.45);
+  outline-offset: -1px;
+}
+
+.workspaces .item {
+  margin: 2px 2px;
+  padding: 0 8px;
+  color: @primary;
+}
+
+.workspaces .item.focused {
+  padding: 0 20px;
+  color: @tertiary;
+  text-shadow: 0 0 6px alpha(@tertiary, 0.65);
+}
+
+#prev,
+.play-pause,
+#next {
+  padding: 0 12px;
+  color: @primary;
+  font-size: 18px;
+}
+
+#prev {
+  margin-left: 2px;
+  margin-right: 0;
+  border-radius: 24px 0 0 24px;
+}
+
+.play-pause {
+  margin-left: 0;
+  margin-right: 0;
+  padding: 0 6px 0 10px;
+  border-radius: 0;
+  font-size: 16px;
+}
+
+#next {
+  margin-left: 0;
+  margin-right: 2px;
+  border-radius: 0 24px 24px 0;
+}
+
+#prev:hover,
+.play-pause:hover,
+#next:hover {
+  color: @contrary;
+  transform: scale(1.1) translateY(0);
+}
+
+.tray {
+  padding: 0 10px;
+}
+
+.tray button {
+  margin: 0 2px;
+  padding: 2px 4px;
+  background-color: transparent;
+  background-image: linear-gradient(
+    145deg,
+    alpha(@on-surface, 0),
+    alpha(@contrary, 0)
+  );
+  background-size: 220% 220%;
+  background-position: 0% 0%;
+  outline: 1px solid alpha(@outline, 0);
+  outline-offset: -1px;
+  border-radius: 8px;
+  box-shadow: inset 0 1px 0 alpha(@on-surface, 0);
+  transform: scale(1);
+  transition:
+    background-color 0.2s ease,
+    background-position 0.22s cubic-bezier(0.2, 0, 0, 1),
+    outline-color 0.2s ease,
+    transform 0.22s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.tray button:hover {
+  background-color: alpha(@surface-container-highest, 0.48);
+  background-image: linear-gradient(
+    145deg,
+    alpha(@primary, 0.16),
+    alpha(@tertiary, 0.2) 52%,
+    alpha(@tertiary, 0.22)
+  );
+  background-position: 100% 100%;
+  outline-color: alpha(@contrary, 0.56);
+  box-shadow:
+    inset 0 1px 0 alpha(@on-surface, 0.12),
+    0 2px 8px alpha(@shadow, 0.22),
+    0 0 9px alpha(@contrary, 0.24);
+  transform: scale(1.16) translateY(1px);
+}
+
+.tray button:active {
+  background-color: alpha(@primary, 0.2);
+  outline-color: alpha(@primary, 0.44);
+  box-shadow: inset 0 2px 4px alpha(@shadow, 0.28);
+  transform: scale(0.94) translateY(1px);
+}
+
+.power-btn {
+  margin: 3px 3px;
+  padding: 0 28px 0 25px;
+  border-radius: 24px;
+  font-size: 17px;
+
+  background-image:
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.1) 0%,
+      rgba(255, 255, 255, 0) 44%,
+      rgba(0, 0, 0, 0.08) 100%
+    ),
+    linear-gradient(
+      115deg,
+      alpha(@primary, 0.32) 0%,
+      alpha(@contrary, 0.2) 20%,
+      alpha(@surface-variant, 0.08) 40%,
+      alpha(@tertiary, 0.28) 60%,
+      alpha(@tertiary, 0.12) 75%,
+      alpha(@contrary, 0.28) 88%,
+      alpha(@primary, 0.24) 100%
+    );
+  background-repeat: no-repeat;
+  background-size:
+    180% 180%,
+    300% 300%;
+  background-position:
+    0% 0%,
+    0% 20%;
+  background-color: alpha(@surface, 0.2);
+
+  outline: 1px solid alpha(@on-surface, 0.14);
+  outline-offset: -1px;
+  box-shadow:
+    inset 1.5px 1.5px 1px alpha(@primary, 0.42),
+    inset -1.5px -1.5px 1px alpha(@tertiary, 0.34),
+    0 2px 6px rgba(0, 0, 0, 0.25),
+    0 0 8px alpha(@tertiary, 0),
+    0 0 8px alpha(@contrary, 0);
+  transform: scale(1) translateY(0);
+
+  transition:
+    background-position 0.44s cubic-bezier(0.4, 0, 0.2, 1),
+    outline-color 0.28s ease,
+    transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1),
+    color 0.3s ease;
+}
+
+.power-btn.profile-balanced {
+  background-image:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.1), transparent 48%),
+    linear-gradient(
+      115deg,
+      alpha(@tertiary, 0.34) 0%,
+      alpha(@contrary, 0.1) 26%,
+      alpha(@surface-variant, 0.1) 48%,
+      alpha(@tertiary, 0.08) 74%,
+      alpha(@tertiary, 0.22) 100%
+    );
+  outline-color: alpha(@tertiary, 0.4);
+}
+
+.power-btn.profile-performance {
+  background-image:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.1), transparent 48%),
+    linear-gradient(
+      115deg,
+      alpha(@error, 0.34) 0%,
+      alpha(@contrary, 0.07) 27%,
+      alpha(@surface-variant, 0.1) 48%,
+      alpha(@tertiary, 0.06) 74%,
+      alpha(@error, 0.22) 100%
+    );
+  outline-color: alpha(@error, 0.4);
+}
+
+.power-btn.profile-powersaver {
+  background-image:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.1), transparent 48%),
+    linear-gradient(
+      115deg,
+      alpha(@contrary, 0.42) 0%,
+      alpha(@tertiary, 0.18) 26%,
+      alpha(@surface-variant, 0.08) 48%,
+      alpha(@primary, 0.14) 72%,
+      alpha(@contrary, 0.32) 100%
+    );
+  outline-color: alpha(@contrary, 0.56);
+}
+
+.power-btn:hover {
+  background-position:
+    100% 100%,
+    100% 80%;
+  outline-color: alpha(@tertiary, 0.6);
+  box-shadow:
+    inset 1.5px 1.5px 1px alpha(@tertiary, 0.62),
+    inset -1.5px -1.5px 1px alpha(@primary, 0.58),
+    0 4px 10px rgba(0, 0, 0, 0.28),
+    0 0 8px alpha(@tertiary, 0.09),
+    0 0 8px alpha(@contrary, 0.18);
+  transform: scale(1.1) translateY(1px);
+  transition:
+    background-position 0.24s cubic-bezier(0.2, 0, 0, 1),
+    outline-color 0.28s ease,
+    transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1),
+    color 0.3s ease;
+}
+
+.power-btn.profile-balanced:hover {
+  outline-color: alpha(@tertiary, 0.65);
+  text-shadow: 0 0 8px alpha(@tertiary, 0.55);
+}
+
+.power-btn.profile-performance:hover {
+  outline-color: alpha(@error, 0.65);
+  text-shadow: 0 0 8px alpha(@error, 0.55);
+}
+
+.power-btn.profile-powersaver:hover {
+  outline-color: alpha(@contrary, 0.78);
+  text-shadow: 0 0 8px alpha(@contrary, 0.72);
+}
+
+.power-btn:active {
+  background:
+    linear-gradient(180deg, rgba(0, 0, 0, 0.08) 0%, rgba(0, 0, 0, 0) 40%),
+    linear-gradient(
+      135deg,
+      alpha(@surface-variant, 0.4) 0%,
+      alpha(@surface-variant, 0.18) 50%,
+      alpha(@surface-variant, 0.28) 100%
+    );
+  text-shadow: none;
+  box-shadow:
+    inset 0 3px 5px rgba(0, 0, 0, 0.22),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.08),
+    0 1px 3px rgba(0, 0, 0, 0.1),
+    0 0 8px alpha(@tertiary, 0),
+    0 0 8px alpha(@contrary, 0);
+  transform: scale(0.93) translateY(1.5px);
+  transition:
+    background 0.1s ease,
+    transform 0.1s cubic-bezier(0.25, 1, 0.35, 1);
+}
+
+#power {
+  margin: 3px 6px;
+  padding: 0 22px 1px 18px;
+  color: @error;
+  font-size: 18px;
+  background-image:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.1), transparent 48%),
+    linear-gradient(
+      115deg,
+      alpha(@error, 0.3) 0%,
+      alpha(@error-container, 0.18) 50%,
+      alpha(@on-error-container, 0.12) 100%
+    );
+  outline-color: alpha(@error, 0.38);
+}
+
+#power:hover {
+  color: @on-error;
+  text-shadow: 0 0 8px alpha(@error, 0.65);
+  outline-color: alpha(@error, 0.65);
+}
+
+tooltip,
+tooltip.background {
+  padding: 8px 12px 8px 14px;
+  color: @on-surface;
+  background-color: alpha(@surface-container-high, 0.98);
+  background-image:
+    linear-gradient(
+      to bottom,
+      transparent 0%,
+      alpha(@primary, 0.92) 24%,
+      alpha(@tertiary, 0.92) 76%,
+      transparent 100%
+    ),
+    linear-gradient(
+      145deg,
+      alpha(@surface-bright, 0.58),
+      alpha(@surface-container, 0.97)
+    );
+  background-repeat: no-repeat;
+  background-size:
+    2px 100%,
+    100% 100%;
+  background-position:
+    left top,
+    left top;
+  border: 1px solid alpha(@outline, 0.36);
+  border-radius: 12px;
+  box-shadow:
+    inset 0 1px 0 alpha(@on-surface, 0.1),
+    0 8px 24px alpha(@shadow, 0.42),
+    0 0 12px alpha(@primary, 0.12);
+}
+
+tooltip box,
+tooltip label {
+  min-height: 0;
+  padding: 0;
+  color: @on-surface;
+  background: transparent;
+  border: none;
+  text-shadow: 0 1px 2px alpha(@shadow, 0.42);
+}
+
+popover > contents {
+  min-height: 0;
+  padding: 6px;
+  color: @on-surface;
+  background-color: alpha(@surface-container, 0.98);
+  background-image:
+    radial-gradient(circle at top left, alpha(@primary, 0.16), transparent 46%),
+    linear-gradient(
+      145deg,
+      alpha(@surface-bright, 0.36),
+      alpha(@surface-container-low, 0.96)
+    );
+  border: 1px solid alpha(@outline, 0.36);
+  border-radius: 15px;
+  box-shadow:
+    inset 0 1px 0 alpha(@on-surface, 0.1),
+    0 8px 24px alpha(@shadow, 0.46),
+    0 0 13px alpha(@primary, 0.1);
+}
+
+popover > contents separator {
+  margin: 4px 6px;
+  min-height: 1px;
+  background-color: alpha(@outline, 0.18);
+  background-image: linear-gradient(
+    to right,
+    transparent,
+    alpha(@primary, 0.38) 28%,
+    alpha(@tertiary, 0.34) 72%,
+    transparent
+  );
+  border: none;
+}
+
+popover contents button,
+popover contents menuitem,
+popover contents modelbutton {
+  min-height: 24px;
+  margin: 1px;
+  padding: 1px 9px;
+  color: @on-surface;
+  background-color: transparent;
+  background-image: none;
+  border: 1px solid alpha(@outline, 0);
+  border-radius: 8px;
+  outline: none;
+  box-shadow: none;
+  transform: none;
+  transition:
+    color 0.18s ease,
+    background-color 0.18s ease,
+    border-color 0.18s ease;
+}
+
+popover contents button:hover,
+popover contents menuitem:hover,
+popover contents modelbutton:hover {
+  color: @on-primary-container;
+  background-color: alpha(@primary-container, 0.54);
+  background-image: linear-gradient(
+    to right,
+    alpha(@primary, 0.16),
+    alpha(@tertiary, 0.1)
+  );
+  border-color: alpha(@primary, 0.3);
+  border-radius: 8px;
+  box-shadow:
+    inset 2px 0 0 alpha(@primary, 0.72),
+    inset 0 1px 0 alpha(@on-surface, 0.08),
+    0 2px 7px alpha(@shadow, 0.2);
+  transform: none;
+}
+
+popover contents button:active,
+popover contents menuitem:active,
+popover contents modelbutton:active,
+popover contents modelbutton:checked {
+  color: @on-tertiary-container;
+  background-color: alpha(@tertiary-container, 0.62);
+  border-color: alpha(@tertiary, 0.34);
+  box-shadow: inset 2px 0 0 alpha(@tertiary, 0.76);
+  transform: none;
+}
+
+popover contents button:disabled,
+popover contents menuitem:disabled,
+popover contents modelbutton:disabled {
+  color: alpha(@on-surface, 0.38);
+  background: transparent;
+  box-shadow: none;
+}
+
+popover contents,
+popover contents box,
+popover contents button,
+popover contents menuitem,
+popover contents modelbutton,
+popover contents label,
+popover contents accelerator {
+  min-height: 0;
+  font-family: sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+}
+
+popover contents label {
+  padding: 0;
+  color: inherit;
+  background: transparent;
+  text-shadow: 0 1px 2px alpha(@shadow, 0.36);
+}
+
+popover contents accelerator,
+popover contents image {
+  min-height: 0;
+  color: alpha(@on-surface-variant, 0.76);
+}

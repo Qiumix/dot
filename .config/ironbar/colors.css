@@ -1,0 +1,54 @@
+/* Primary */
+@define-color primary #81d5ce;
+@define-color on-primary #003734;
+@define-color primary-container #00504c;
+@define-color on-primary-container #9df2ea;
+
+/* Secondary */
+@define-color secondary #b0ccc9;
+@define-color on-secondary #1c3533;
+@define-color secondary-container #324b49;
+@define-color on-secondary-container #cce8e5;
+
+/* Tertiary */
+@define-color tertiary #b0c9e7;
+@define-color on-tertiary #19324a;
+@define-color tertiary-container #304962;
+@define-color on-tertiary-container #d0e4ff;
+
+/* Contrary: the native source -60 degree accent family. */
+@define-color contrary #bbcd9e;
+@define-color on-contrary #263513;
+@define-color contrary-container #3c4c28;
+@define-color on-contrary-container #d6e9b9;
+@define-color contrary-fixed #d6e9b9;
+@define-color contrary-fixed-dim #bbcd9e;
+
+/* Error */
+@define-color error #ffb4ab;
+@define-color on-error #690005;
+@define-color error-container #93000a;
+@define-color on-error-container #ffdad6;
+
+/* Surfaces */
+@define-color background #0e1514;
+@define-color on-background #dde4e2;
+@define-color surface #0e1514;
+@define-color on-surface #dde4e2;
+@define-color surface-variant #3f4947;
+@define-color on-surface-variant #bec9c7;
+@define-color surface-dim #0e1514;
+@define-color surface-bright #343a3a;
+@define-color surface-container-lowest #090f0f;
+@define-color surface-container-low #161d1c;
+@define-color surface-container #1a2120;
+@define-color surface-container-high #252b2a;
+@define-color surface-container-highest #2f3635;
+
+/* Edges and depth */
+@define-color outline #889391;
+@define-color outline-variant #3f4947;
+@define-color shadow #000000;
+@define-color scrim #000000;
+@define-color contrary-outline #85976c;
+@define-color contrary-outline-variant #3c4c28;

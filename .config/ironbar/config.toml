@@ -1,0 +1,99 @@
+#:schema https://f.jstanger.dev/github/ironbar/schema.json
+
+position = "top"
+height = 20
+margin_top = 4
+margin_bottom = 4
+ironvar_defaults.spotify_running = "false"
+
+[[start]]
+type = "workspaces"
+hidden = ["special:spotify"]
+
+[[start]]
+type = "label"
+name = "prev"
+label = "󰒮"
+show_if = "{{playerctl -l 2>/dev/null | grep -q . && echo true || echo false}}"
+tooltip = "Previous"
+on_click_left = "~/.config/ironbar/scripts/media.sh previous"
+
+[[start]]
+type = "script"
+class = "play-pause"
+mode = "watch"
+interval = 300
+show_if = "{{playerctl -l 2>/dev/null | grep -q . && echo true || echo false}}"
+cmd = "~/.config/ironbar/scripts/media.sh watch"
+tooltip = "{{~/.config/ironbar/scripts/media.sh metadata}}"
+on_click_left = "~/.config/ironbar/scripts/media.sh toggle"
+
+[[start]]
+type = "label"
+name = "next"
+label = "󰒭"
+show_if = "{{playerctl -l 2>/dev/null | grep -q . && echo true || echo false}}"
+tooltip = "Next"
+on_click_left = "~/.config/ironbar/scripts/modules/media.sh next"
+
+
+[[center]]
+type = "script"
+class = "volume"
+mode = "watch"
+cmd = "~/.config/ironbar/scripts/modules/volume.sh watch"
+on_scroll_up = "~/.config/ironbar/scripts/modules/volume.sh up"
+on_scroll_down = "~/.config/ironbar/scripts/modules/volume.sh down"
+on_click_left = "~/.config/ironbar/scripts/modules/volume.sh open"
+on_click_right = "~/.config/ironbar/scripts/modules/volume.sh mute"
+
+
+[[center]]
+type = "script"
+class = "brightness"
+mode = "poll"
+interval = 500
+cmd = "~/.config/ironbar/scripts/modules/brightness.sh status"
+on_scroll_up = "~/.config/ironbar/scripts/modules/brightness.sh up"
+on_scroll_down = "~/.config/ironbar/scripts/modules/brightness.sh down"
+
+
+[[center]]
+type = "clock"
+class = "clock"
+interval = 300
+format = "%m/%d %H:%M:%S"
+
+
+[[center]]
+type = "script"
+class = "bluetooth"
+mode = "watch"
+cmd = "~/.config/ironbar/scripts/modules/bluetooth.sh watch"
+tooltip = "{{~/.config/ironbar/scripts/modules/bluetooth.sh tooltip}}"
+on_click_left = "~/.config/ironbar/scripts/modules/bluetooth.sh open"
+
+[[end]]
+type = "sys_info"
+class = "custom-battery"
+format = [" {net_down@wlp4s0}Mbps ", " {net_up@wlp4s0}Mbps"]
+interval = 1
+
+[[end]]
+type = "sys_info"
+class = "custom-battery"
+format = ["  {cpu_percent}%"]
+interval = 1
+
+[[end]]
+type = "tray"
+icon_size = 18
+on_click_left = "default"
+on_click_right = "menu"
+
+
+[[end]]
+type = "label"
+name = "power"
+label = "⏻"
+on_click_left = "wlogout -b 3 -T 300 -B 300"
