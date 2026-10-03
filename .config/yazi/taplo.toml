@@ -1,0 +1,9 @@
+include = ["keymap.toml", "package.toml", "yazi.toml", "theme.toml"]
+
+[formatting]
+align_entries         = true
+align_comments        = true
+align_single_comments = true
+
+[schema]
+path = "taplo://taplo.toml"
