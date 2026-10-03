@@ -1,0 +1,10 @@
+layer-rule {
+    match namespace="^launcher$"
+    match namespace="^bar-rs$"
+    match namespace="^ironbar$"
+    place-within-backdrop false
+    background-effect {
+        xray false
+        blur true
+    }
+}

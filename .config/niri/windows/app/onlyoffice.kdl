@@ -1,0 +1,5 @@
+window-rule {
+    match app-id="ONLYOFFICE"
+    opacity 1.0
+}
+

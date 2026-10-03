@@ -1,0 +1,32 @@
+prefer-no-csd
+window-rule {
+    geometry-corner-radius 0
+    clip-to-geometry true
+    opacity 0.9
+    draw-border-with-background false
+    background-effect {
+        xray false
+        blur true
+    }
+    popups {
+        opacity 0.75
+        background-effect {
+            blur true
+            xray false
+        }
+        geometry-corner-radius 8
+    }
+}
+window-rule {
+    match app-id="foot"
+    opacity 0.9
+}
+window-rule {
+    match app-id="mpv"
+    opacity 1.0
+}
+include "~/.config/niri/windows/full.kdl"
+include "~/.config/niri/windows/max.kdl"
+include "~/.config/niri/windows/screencast.kdl"
+include "~/.config/niri/windows/screenshot.kdl"
+include "~/.config/niri/windows/app/init.kdl"

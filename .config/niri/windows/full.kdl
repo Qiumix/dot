@@ -1,0 +1,6 @@
+window-rule {
+    match app-id="me-him188-ani-app-desktop-AniDesktop"
+    match app-id="mpv"
+    match app-id="^Minecraft"
+    open-fullscreen true
+}

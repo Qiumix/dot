@@ -1,0 +1,3 @@
+include "~/.config/niri/windows/app/splayer.kdl"
+include "~/.config/niri/windows/app/showmethekey.kdl"
+include "~/.config/niri/windows/app/onlyoffice.kdl"

@@ -1,0 +1,27 @@
+binds {
+    // Windows Management Using Mouse Wheel
+    Mod+WheelScrollDown cooldown-ms=25 {
+        focus-column-right
+    }
+    Mod+WheelScrollUp cooldown-ms=25 {
+        focus-column-left
+    }
+    Mod+Ctrl+WheelScrollDown cooldown-ms=25 {
+        move-column-right
+    }
+    Mod+Ctrl+WheelScrollUp cooldown-ms=25 {
+        move-column-left
+    }
+    Mod+Shift+WheelScrollDown cooldown-ms=25 {
+        focus-workspace-down
+    }
+    Mod+Shift+WheelScrollUp cooldown-ms=25 {
+        focus-workspace-up
+    }
+    Mod+Ctrl+Shift+WheelScrollDown cooldown-ms=25 {
+        move-column-to-workspace-down
+    }
+    Mod+Ctrl+Shift+WheelScrollUp cooldown-ms=25 {
+        move-column-to-workspace-up
+    }
+}

@@ -1,0 +1,18 @@
+window-rule {
+    match title="Floating Window - Show Me The Key"
+    default-floating-position x=0 y=985
+    default-window-height {
+        fixed 50
+    }
+    default-column-width {
+        fixed 200
+    }
+    background-effect {
+        xray false
+        blur false
+    }
+    draw-border-with-background false
+    open-fullscreen false
+    open-floating true
+    baba-is-float true
+}

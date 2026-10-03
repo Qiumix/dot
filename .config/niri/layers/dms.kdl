@@ -1,0 +1,48 @@
+layer-rule {
+    match namespace="^dms:"
+    place-within-backdrop false
+    background-effect {
+        xray false
+        blur false
+    }
+}
+layer-rule {
+    match namespace="dms:bar"
+    place-within-backdrop false
+    background-effect {
+        xray false
+        blur false
+    }
+}
+layer-rule {
+    match namespace="^dms:control-center"
+    match namespace="^dms:dash"
+    match namespace="^dms:osd"
+    match namespace="^dms:battery"
+    match namespace="^dms:clipboard"
+    match namespace="^dms:app-launcher"
+    match namespace="^dms:process-list-popout"
+    match namespace="^dms:notification-center-popout"
+    match namespace="^dms:notification-popup"
+    match namespace="^dms:tray-menu-window"
+    place-within-backdrop false
+    background-effect {
+        xray false
+        blur true
+    }
+}
+layer-rule {
+    match namespace="^dms:control-center:background"
+    match namespace="^dms:dash:background"
+    match namespace="^dms:osd:background"
+    match namespace="^dms:battery:background"
+    match namespace="^dms:clipboard-popout:background"
+    match namespace="^dms:app-launcher:background"
+    match namespace="^dms:process-list-popout:background"
+    match namespace="^dms:notification-popup:background"
+    match namespace="^dms:notification-center-popout:background"
+    match namespace="^dms:tray-menu-window:background"
+    background-effect {
+        blur false
+    }
+}
