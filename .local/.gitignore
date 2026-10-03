@@ -9,3 +9,4 @@
 !share
 /share/*
 !share/darkman
+!share/applications

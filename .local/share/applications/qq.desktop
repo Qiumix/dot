@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=QQ
+# Exec=sh -c "DISPLAY=:11 linuxqq"
+Exec=/home/qiumix/.local/share/applications/scripts/qq
+Terminal=false
+Type=Application
+Icon=qq
+StartupWMClass=QQ
+Categories=Network;
+Comment=QQ
