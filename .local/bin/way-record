@@ -1,0 +1,51 @@
+#!/usr/bin/env fish
+
+pkill -x wf-recorder 2>/dev/null; and exit 0
+
+set RECORDING_DIR "$HOME/Videos"
+mkdir -p "$RECORDING_DIR"
+set timestamp (date +%Y%m%d_%H%M%S)
+set output_file "$RECORDING_DIR/$timestamp.mp4"
+
+set AUDIO_DEVICE "alsa_output.pci-0000_00_1f.3.analog-stereo.monitor"
+
+set options fullscreen region
+set choice (printf '%s\n' $options | fuzzel --dmenu -l 3 -p "󰥠 record option: ")
+
+if test -z "$choice"
+    exit 0
+end
+
+switch "$choice"
+    case fullscreen
+        wf-recorder \
+            --audio="$AUDIO_DEVICE" \
+            -g "0,0 2560x1600" \
+            -c h264_nvenc \
+            -p rc=vbr \
+            -p cq=22 \
+            -p preset=p7 \
+            -p bufsize=60000 \
+            -p spacial_aq=1 \
+            -p temporal_aq=1 \
+            -C aac -P b=384k \
+            -f "$output_file"
+    case region
+        set region (slurp)
+        if test -z "$region"
+            exit 1
+        end
+        wf-recorder -g "$region" \
+            --audio="$AUDIO_DEVICE" \
+            -c h264_nvenc \
+            -p rc=vbr \
+            -p cq=22 \
+            -p preset=p7 \
+            -p bufsize=60000 \
+            -p spacial_aq=1 \
+            -p temporal_aq=1 \
+            -C aac -P b=384k \
+            -f "$output_file"
+    case '*'
+        exit 1
+end

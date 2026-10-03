@@ -1,0 +1,9 @@
+# ignore all
+*
+
+# not ignore .gitignore
+!.gitignore
+
+!.config
+
+!.local

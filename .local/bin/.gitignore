@@ -1,0 +1,5 @@
+# track all script
+!*
+
+# not tract binary
+payload_dumper

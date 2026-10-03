@@ -1,0 +1,7 @@
+# ignore all
+*
+
+# not ignore .gitignore
+!.gitignore
+
+!bin
