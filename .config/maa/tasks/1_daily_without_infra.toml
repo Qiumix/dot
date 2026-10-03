@@ -1,0 +1,83 @@
+#----------------------------- StartUp ----------------------------#
+[[tasks]]
+type = "StartUp"
+
+[tasks.params]
+client_type = "Official"
+start_game_enabled = true
+account_name = "177****0814"
+
+#------------------------------ Fight -----------------------------#
+[[tasks]]
+type = "Fight"
+
+[tasks.params]
+expiring_medicine = 1000
+
+# [[tasks.variants]]
+# params = { stage = "OR-7" }
+
+# On any side story open, fight last stage
+[[tasks.variants]]
+condition = { type = "OnSideStory", client = "Official" }
+params = { stage = "" }
+
+# Otherwise, fight PR-A-2 on Monday, PR-B-2 on Tuesday, PR-D-2 on Wednesday,
+# PR-C-2 on Thursday, AP-5 on Weekend, 1-7 for the rest
+[[tasks.variants]]
+condition = { type = "Weekday", weekdays = ["Mon"], timezone = "Official" }
+params = { stage = "PR-A-2" }
+
+[[tasks.variants]]
+condition = { type = "Weekday", weekdays = ["Tue"], timezone = "Official" }
+params = { stage = "PR-B-2" }
+
+[[tasks.variants]]
+condition = { type = "Weekday", weekdays = ["Wed"], timezone = "Official" }
+params = { stage = "PR-D-2" }
+
+[[tasks.variants]]
+condition = { type = "Weekday", weekdays = ["Thu"], timezone = "Official" }
+params = { stage = "PR-C-2" }
+
+[[tasks.variants]]
+condition = { type = "Weekday", weekdays = ["Sat", "Sun"], timezone = "Official" }
+params = { stage = "AP-5" }
+
+[[tasks.variants]]
+params = { stage = "1-7" }
+
+#------------------------------ Mall ------------------------------#
+[[tasks]]
+type = "Mall"
+
+[tasks.params]
+buy_first = ["招聘许可", "龙门币"]
+blacklist = ["碳", "家具", "加急许可"]
+
+#----------------------------- Recruit ----------------------------#
+[[tasks]]
+type = "Recruit"
+
+[tasks.params]
+recruitment_time = { '3' = 540, '4' = 540, '5' = 540 }
+refresh = true
+select = [4, 5]
+confirm = [3, 4, 5]
+skip_robot = false
+times = 4
+
+#------------------------------ Award -----------------------------#
+[[tasks]]
+type = "Award"
+
+[tasks.params]
+mail = true
+orundum = true
+mining = true
+specialaccess = true
+
+#--------------------------- Close Game ---------------------------#
+[[tasks]]
+type = "CloseDown"
+params = { client_type = "Official" }

@@ -1,0 +1,5 @@
+--theme="gruvbox-dark"
+# LC_Orange_PPL
+
+--pager="less --RAW-CONTROL-CHARS --quit-if-one-screen --mouse"
+--style="numbers,changes"

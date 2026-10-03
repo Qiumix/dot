@@ -1,0 +1,23 @@
+# only main display
+profile {
+    output "eDP-1" enable mode "2560x1600@165Hz" position 0,0
+    exec "~/.local/bin/refresh-niri-env"
+}
+
+profile {
+    output "eDP-2" enable mode "2560x1600@165Hz" position 0,0
+    exec "~/.local/bin/refresh-niri-env"
+}
+
+# display cheater
+profile {
+    output "eDP-1" disable
+    output "HDMI-A-1" enable mode "1920x1080@60Hz" position 0,0
+    exec "~/.local/bin/refresh-niri-env"
+}
+
+profile {
+    output "eDP-2" disable
+    output "HDMI-A-1" enable mode "1920x1080@60Hz" position 0,0
+    exec "~/.local/bin/refresh-niri-env"
+}

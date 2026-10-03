@@ -1,0 +1,57 @@
+theme = "gruvbox_t"
+
+[editor]
+line-number = "relative"
+bufferline = "always"
+end-of-line-diagnostics = "hint"
+popup-border = "all"
+
+[editor.statusline]
+right = [
+  "file-type",
+  "diagnostics",
+  "selections",
+  "register",
+  "position",
+  "file-encoding",
+]
+separator = "│"
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.file-picker]
+hidden = false
+
+[editor.soft-wrap]
+enable = false
+
+[editor.lsp]
+display-messages = true
+
+[editor.inline-diagnostics]
+cursor-line = "hint"
+
+[keys.normal]
+C-h = "jump_view_left"
+C-l = "jump_view_right"
+C-j = "jump_view_down"
+C-k = "jump_view_up"
+S-x = "select_line_above"
+x = "select_line_below"
+
+# [keys.normal."space"]
+# E = [
+#   ':sh rm -f /tmp/unique-ca1ea106',
+#   ':insert-output yazi "%{buffer_name}" --chooser-file=/tmp/unique-ca1ea106',
+#   ':sh printf "\x1b[?1049h\x1b[?2004h" > /dev/tty',
+#   ':open %sh{cat /tmp/unique-ca1ea106}',
+#   ':redraw',
+#   ':set mouse false',
+#   ':set mouse true',
+# ]
+
+[keys.insert]
+C-space = "completion"

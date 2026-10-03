@@ -1,0 +1,21 @@
+#----------------------------- Infrast ----------------------------#
+[[tasks]]
+type = "Infrast"
+
+[tasks.params]
+mode = 10000
+facility = ["Trade", "Reception", "Mfg", "Power", "Office", "Training", "Dorm"]
+drones = "Money"
+threshold = 0.5
+dorm_trust_enabled = true
+replenish = true
+continue_training = true
+filename = "baka.json"
+
+[[tasks.variants]]
+condition = { type = "Time", start = "04:00:00", end = "16:00:00" }
+params = { plan_index = 0 }
+
+[[tasks.variants]]
+condition = { type = "Time", start = "16:00:01", end = "03:59:59" }
+params = { plan_index = 1 }

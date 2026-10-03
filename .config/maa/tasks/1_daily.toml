@@ -1,0 +1,103 @@
+#----------------------------- StartUp ----------------------------#
+[[tasks]]
+type = "StartUp"
+
+[tasks.params]
+client_type = "Official"
+start_game_enabled = true
+account_name = "177****0814"
+
+#----------------------------- Infrast ----------------------------#
+[[tasks]]
+type = "Infrast"
+
+[tasks.params]
+mode = 10000
+facility = ["Trade", "Reception", "Mfg", "Power", "Office", "Training", "Dorm"]
+drones = "Money"
+threshold = 0.5
+dorm_trust_enabled = true
+replenish = true
+continue_training = true
+filename = "baka.json"
+
+[[tasks.variants]]
+condition = { type = "Time", start = "04:00:00", end = "16:00:00" }
+params = { plan_index = 0 }
+
+[[tasks.variants]]
+condition = { type = "Time", start = "16:00:01", end = "03:59:59" }
+params = { plan_index = 1 }
+
+#------------------------------ Fight -----------------------------#
+[[tasks]]
+type = "Fight"
+
+[tasks.params]
+expiring_medicine = 1000
+series = 0
+
+# [[tasks.variants]]
+# params = { stage = "TO-9" }
+
+# [[tasks.variants]]
+# condition = { type = "OnSideStory", client = "Official" }
+# params = { stage = "" }
+
+[[tasks.variants]]
+condition = { type = "Weekday", weekdays = ["Mon"], timezone = "Official" }
+params = { stage = "PR-A-1" }
+
+[[tasks.variants]]
+condition = { type = "Weekday", weekdays = ["Tue"], timezone = "Official" }
+params = { stage = "PR-B-1" }
+
+[[tasks.variants]]
+condition = { type = "Weekday", weekdays = ["Wed"], timezone = "Official" }
+params = { stage = "PR-D-1" }
+
+[[tasks.variants]]
+condition = { type = "Weekday", weekdays = ["Thu"], timezone = "Official" }
+params = { stage = "PR-C-1" }
+
+[[tasks.variants]]
+condition = { type = "Weekday", weekdays = ["Sat", "Sun"], timezone = "Official" }
+params = { stage = "AP-5" }
+
+[[tasks.variants]]
+params = { stage = "1-7" }
+
+#------------------------------ Mall ------------------------------#
+[[tasks]]
+type = "Mall"
+
+[tasks.params]
+buy_first = ["招聘许可", "龙门币"]
+blacklist = ["碳", "家具", "加急许可"]
+
+#----------------------------- Recruit ----------------------------#
+[[tasks]]
+type = "Recruit"
+
+[tasks.params]
+recruitment_time = { '3' = 540, '4' = 540, '5' = 540 }
+refresh = true
+select = [4, 5]
+confirm = [3, 4, 5]
+skip_robot = false
+times = 4
+
+#------------------------------ Award -----------------------------#
+[[tasks]]
+type = "Award"
+
+[tasks.params]
+mail = true
+orundum = true
+mining = true
+specialaccess = true
+
+#--------------------------- Close Game ---------------------------#
+[[tasks]]
+type = "CloseDown"
+params = { client_type = "Official" }

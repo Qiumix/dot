@@ -1,0 +1,44 @@
+(defcfg
+  process-unmapped-keys yes
+)
+
+(defalias
+  caps_fn (layer-toggle fn_layer)
+  slsh_num (tap-hold 200 500 / (layer-toggle num_layer))
+)
+
+(defsrc
+  esc
+  grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
+  tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
+  caps a    s    d    f    g    h    j    k    l    ;    '    ret
+  lsft z    x    c    v    b    n    m    ,    .    /    rsft
+  lctl lmet lalt           spc            ralt rmet rctl
+)
+
+(deflayer default
+  esc
+  grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
+  tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
+  @caps_fn a  s  d    f    g    h    j    k    l    ;    '    ret
+  lsft z    x    c    v    b    n    m    ,    .    @slsh_num rsft
+  lctl lmet lalt           spc            ralt rmet rctl
+)
+
+(deflayer fn_layer
+  caps
+  _    _    _    _    _    _    _    _    _    _    _    _    _    _
+  _    _    _    ret  rsft _    _    \    [    ]    del  _    _    _
+  _    lsft _    _    esc  _    left down up   rght lctl _    _
+  _    _    _    _    `    _    =    -    home end  bspc _
+  _    _    _              _              _    _    _
+)
+
+(deflayer num_layer
+  _
+  _    _    _    _    _    _    _    _    _    _    _    _    _    _
+  _    _    _    _    _    _    _    _    _    _    _    _    _    _
+  _    1    2    3    4    9    _    9    _    0    _    _    _
+  bspc 5    6    7    8    _    _    _    _    _    _    _
+  _    _    _              0              _    _    _
+)

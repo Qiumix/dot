@@ -1,0 +1,7 @@
+#----------------------------- StartUp ----------------------------#
+[[tasks]]
+type = "StartUp"
+
+[tasks.params]
+client_type = "Official"
+start_game_enabled = true

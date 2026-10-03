@@ -4,8 +4,50 @@
 # not ignore .gitignore
 !.gitignore
 
+# single files
+!kd.toml
+!mimeapps.list
+!user-dirs.dirs
+!user-dirs.locale
+
+# dirs
+!bar-rs/
+!bat/
+!eza/
+!fastfetch/
+!fcitx5/
+!fish/
+!fontconfig/
+!foot/
+!fuzzel/
+!gammastep/
+!glow/
+!helix/
+!herdr/
+!hypr/
+!kanata/
+!kanshi/
+!kitty/
+!lspmux/
+!maa/
+!mango/
+!matugen/
+!mpv/
+!neovide/
+!pip/
+!pipewire/
+!rog/
+!sioyek/
+!starship/
+!swayimg/
+!ttyper/
+!uv/
 !vim/
-
+!waybar/
+!xdg-desktop-portal/
+!xdg-desktop-portal-termfilechooser/
+!zathura/
+!zed/
+!zellij/
 !zsh/
-
 !zsh-abbr/

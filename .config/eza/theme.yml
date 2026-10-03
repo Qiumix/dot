@@ -1,0 +1,8 @@
+extensions:
+  kdl:
+    icon:
+      glyph: ""
+      style:
+        foreground: "Red"
+    filename:
+      foreground: "Green"

@@ -1,0 +1,114 @@
+[[language]]
+name = "rust"
+formatter = { command = "rustfmt", args = ["+nightly"] }
+
+[language-server.rust-analyzer.config]
+cargo.features = "all"
+check.command = "clippy"
+# inlayHints.typeHints.enable = false
+# inlayHints.parameterHints.enable = false
+# inlayHints.chainingHints.enable = false
+
+[[language]]
+name = "typescript"
+roots = ["deno.json", "deno.jsonc", "package.json"]
+language-servers = [
+  { except-features = [
+    "format",
+  ], name = "typescript-language-server" },
+  { except-features = [
+    "format",
+  ], name = "deno-lsp" },
+  { except-features = [
+    "format",
+  ], name = "tailwindcss-ls" },
+  "vscode-eslint-language-server",
+]
+formatter = { command = "prettier", args = ["--parser", "typescript"] }
+auto-format = true
+
+[[language]]
+name = "javascript"
+roots = ["deno.json", "deno.jsonc", "package.json"]
+language-servers = [
+  { except-features = [
+    "format",
+  ], name = "typescript-language-server" },
+  { except-features = [
+    "format",
+  ], name = "deno-lsp" },
+  { except-features = [
+    "format",
+  ], name = "tailwindcss-ls" },
+  "vscode-eslint-language-server",
+]
+formatter = { command = "prettier", args = ["--parser", "typescript"] }
+auto-format = true
+
+[[language]]
+name = "tsx"
+roots = ["deno.json", "deno.jsonc", "package.json"]
+language-servers = [
+  { except-features = [
+    "format",
+  ], name = "typescript-language-server" },
+  { except-features = [
+    "format",
+  ], name = "deno-lsp" },
+  { except-features = [
+    "format",
+  ], name = "tailwindcss-ls" },
+  "vscode-eslint-language-server",
+]
+formatter = { command = "prettier", args = ["--parser", "typescript"] }
+auto-format = true
+
+[[language]]
+name = "jsx"
+roots = ["deno.json", "deno.jsonc", "package.json"]
+language-servers = [
+  { except-features = [
+    "format",
+  ], name = "typescript-language-server" },
+  { except-features = [
+    "format",
+  ], name = "deno-lsp" },
+  { except-features = [
+    "format",
+  ], name = "tailwindcss-ls" },
+  "vscode-eslint-language-server",
+]
+formatter = { command = "prettier", args = ["--parser", "typescript"] }
+auto-format = true
+
+# [language-server.vscode-eslint-language-server.config]
+# rootDir = "expo-app/"
+# validate = "on"
+# experimental = { useFlatConfig = false }
+# rulesCustomizations = []
+# run = "onType"
+# problems = { shortenToSingleLine = false }
+# nodePath = ""
+
+# [language-server.vscode-eslint-language-server]
+# required-root-patterns = ["*eslint*", "eslint*"]
+
+[language-server.typescript-language-server]
+required-root-patterns = ["package.json"]
+
+[language-server.deno-lsp]
+command = "deno"
+args = ["lsp"]
+config.deno.enable = true
+required-root-patterns = ["deno.*"]
+
+# [language-server.vscode-eslint-language-server.config.codeActionsOnSave]
+# enable = true
+# mode = "fixAll"
+
+[language-server]
+scheme-langserver = { command = "scheme-langserver" }
+
+[[language]]
+name = "scheme"
+language-servers = ["scheme-langserver"]
