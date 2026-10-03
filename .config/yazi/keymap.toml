@@ -16,8 +16,8 @@ desc = "Cd to ~/Documents"
 
 [[mgr.prepend_keymap]]
 on   = ["g", "p"]
-run  = "cd ~/pj"
-desc = "Cd to ~/pj"
+run  = "cd ~/Projects"
+desc = "Cd to ~/Projects"
 
 [[mgr.prepend_keymap]]
 on   = ["g", "P"]
