@@ -89,11 +89,6 @@ on  = "M"
 run = "plugin mount"
 
 [[mgr.prepend_keymap]]
-on   = ["g", "f"]
-run  = 'shell "dolphin ."'
-desc = "dolphin"
-
-[[mgr.prepend_keymap]]
 on   = ["g", "r"]
 run  = "plugin cd-git-root"
 desc = "Go to git repo root"
