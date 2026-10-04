@@ -1,6 +1,7 @@
 include "./animation.kdl"
 include "./binds/init.kdl"
 include "./env.kdl"
+include "./env_extra.kdl"
 include "./layers/init.kdl"
 include "./layout.kdl"
 include "./output.kdl"
