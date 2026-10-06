@@ -44,6 +44,11 @@ on   = ["g", "l"]
 run  = 'shell "localsend %s"'
 desc = "localsend"
 
+[[mgr.prepend_keymap]]
+on   = ["g", "L"]
+run  = 'cd ~/.local'
+desc = "Cd to ~/.local"
+
 # compress
 [[mgr.prepend_keymap]]
 on   = ["c", "a", "a"]
