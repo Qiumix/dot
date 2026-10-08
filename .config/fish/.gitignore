@@ -2,8 +2,6 @@
 !fish_variables
 !fish_plugins
 
-!config.d/
+!conf.d/
+!functions/
 
-./functions/k.fish
-./functions/ks.fish
-./functions/start_docker.fish
