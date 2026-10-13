@@ -112,3 +112,23 @@ scheme-langserver = { command = "scheme-langserver" }
 [[language]]
 name = "scheme"
 language-servers = ["scheme-langserver"]
+
+[language-server.emmylua_ls]
+command = "emmylua_ls"
+config = { emmylua = { codeLens = { enable = true }, hint = { enable = true } } }
+
+[[language]]
+name = "lua"
+language-servers = ["emmylua_ls"]
+roots = [
+  ".emmyrc.json",
+  ".emmyrc.lua",
+  ".luarc.json",
+  ".luarc.jsonc",
+  ".luacheckrc",
+  ".stylua.toml",
+  "stylua.toml",
+  "selene.toml",
+  "selene.yml",
+  ".git",
+]
