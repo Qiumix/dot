@@ -79,11 +79,12 @@ class = "custom-battery"
 format = [" {net_down@wlp4s0}Mbps ", " {net_up@wlp4s0}Mbps"]
 interval = 1
 
-[[end]]
-type = "sys_info"
-class = "custom-battery"
-format = ["  {cpu_percent}%"]
-interval = 1
+# [[end]]
+# type = "script"
+# class = "custom-battery"
+# mode = "poll"
+# cmd = "~/.config/ironbar/scripts/disk_temperature"
+# interval = 240000
 
 [[end]]
 type = "tray"
