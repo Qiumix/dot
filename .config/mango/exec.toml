@@ -1,0 +1,19 @@
+[global]
+
+# Run once at startup, in order
+exec_once = [
+  "pgrep fcitx5 || fcitx5 -d",                  # IME
+  "xwayland-satellite :11",                     # XWayland
+  "kanshi",                                     # Monitor profile
+  "sunshine",                                   # Sunshine streaming
+  "~/.local/bin/sync_x11_clip & disown",        # Clipboard sync
+  "gammastep -l 39.9:116.3 -t 3500:3000 -r -P", # Screen warmth
+  "wl-paste --watch cliphist store",            # Clipboard history
+  "kanata",                                     # Kanata key remapper
+]
+
+# Display scaling (disabled)
+# exec_once = ["echo 'Xft.dpi: 144' | xrdb -m"]
+
+# DMS (disabled)
+# exec_once = ["dms run"]

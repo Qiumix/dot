@@ -1,0 +1,214 @@
+# ============================================================
+# Key Bindings (migrated from niri)
+# ============================================================
+
+[bind.default]
+
+# Reload config
+"SUPER+r" = "reload_config"
+
+# Quit
+"SUPER+SHIFT+E" = "quit"
+
+# Menu and terminal
+"SUPER+D" = "spawn,fuzzel"
+"SUPER+t" = "spawn,kitty -1"
+
+# Close window
+"SUPER+q" = "killclient"
+
+# Overview
+"SUPER+o" = "toggleoverview"
+
+# Toggle floating
+"ALT+backslash" = "togglefloating"
+"SUPER+Return" = "togglefloating"
+
+# Toggle fullscreen / maximize
+"ALT+f" = "togglefullscreen"
+"ALT+SHIFT+f" = "togglefakefullscreen"
+"ALT+a" = "togglemaximizescreen"
+"SUPER+f" = "togglemaximizescreen"
+"SUPER+SHIFT+f" = "togglefullscreen"
+"SUPER+CTRL+f" = "set_proportion,1.0"
+
+# Toggle global / scratchpad / minimize
+"SUPER+g" = "toggleglobal"
+"ALT+z" = "toggle_scratchpad"
+"SUPER+i" = "minimized"
+"SUPER+SHIFT+I" = "restore_minimized"
+
+# Switch window focus
+"SUPER+Tab" = "focusstack,next"
+"SUPER+SHIFT+Tab" = "focusstack,prev"
+
+"SUPER+Left" = "focusdir,left"
+"SUPER+Right" = "focusdir,right"
+"SUPER+Down" = "focusdir,down"
+"SUPER+Up" = "focusdir,up"
+
+"SUPER+h" = "focusdir,left"
+"SUPER+l" = "focusdir,right"
+"SUPER+j" = "viewtoright,0"
+"SUPER+k" = "viewtoleft,0"
+
+# Swap window
+"SUPER+SHIFT+Up" = "exchange_client,up"
+"SUPER+SHIFT+Down" = "exchange_client,down"
+"SUPER+SHIFT+Left" = "exchange_client,left"
+"SUPER+SHIFT+Right" = "exchange_client,right"
+"SUPER+SHIFT+k" = "exchange_client,up"
+"SUPER+SHIFT+j" = "exchange_client,down"
+"SUPER+SHIFT+h" = "exchange_client,left"
+"SUPER+SHIFT+l" = "exchange_client,right"
+
+# Tag switch
+"SUPER+1" = "view,1,0"
+"SUPER+2" = "view,2,0"
+"SUPER+3" = "view,3,0"
+"SUPER+4" = "view,4,0"
+"SUPER+5" = "view,5,0"
+"SUPER+6" = "view,6,0"
+"SUPER+7" = "view,7,0"
+"SUPER+8" = "view,8,0"
+"SUPER+9" = "view,9,0"
+
+# Move window to tag
+"ALT+1" = "tag,1,0"
+"ALT+2" = "tag,2,0"
+"ALT+3" = "tag,3,0"
+"ALT+4" = "tag,4,0"
+"ALT+5" = "tag,5,0"
+"ALT+6" = "tag,6,0"
+"ALT+7" = "tag,7,0"
+"ALT+8" = "tag,8,0"
+"ALT+9" = "tag,9,0"
+
+# Move window to tag (niri style: Mod+Ctrl+N)
+"SUPER+CTRL+1" = "tag,1,0"
+"SUPER+CTRL+2" = "tag,2,0"
+"SUPER+CTRL+3" = "tag,3,0"
+"SUPER+CTRL+4" = "tag,4,0"
+"SUPER+CTRL+5" = "tag,5,0"
+"SUPER+CTRL+6" = "tag,6,0"
+"SUPER+CTRL+7" = "tag,7,0"
+"SUPER+CTRL+8" = "tag,8,0"
+"SUPER+CTRL+9" = "tag,9,0"
+
+# Move window to tag (niri style: Mod+Shift+N)
+"SUPER+SHIFT+1" = "tag,1,0"
+"SUPER+SHIFT+2" = "tag,2,0"
+"SUPER+SHIFT+3" = "tag,3,0"
+"SUPER+SHIFT+4" = "tag,4,0"
+"SUPER+SHIFT+5" = "tag,5,0"
+"SUPER+SHIFT+6" = "tag,6,0"
+"SUPER+SHIFT+7" = "tag,7,0"
+"SUPER+SHIFT+8" = "tag,8,0"
+"SUPER+SHIFT+9" = "tag,9,0"
+
+# Monitor switch
+"ALT+SHIFT+Left" = "focusmon,left"
+"ALT+SHIFT+Right" = "focusmon,right"
+"SUPER+ALT+Left" = "tagmon,left"
+"SUPER+ALT+Right" = "tagmon,right"
+
+# Gaps
+"ALT+SHIFT+X" = "incgaps,1"
+"ALT+SHIFT+Z" = "incgaps,-1"
+"ALT+SHIFT+R" = "togglegaps"
+
+# Move column/window (niri: Mod+Ctrl+H/J/K/L)
+"SUPER+CTRL+Up" = "exchange_client,up"
+"SUPER+CTRL+Down" = "exchange_client,down"
+"SUPER+CTRL+Left" = "exchange_client,left"
+"SUPER+CTRL+Right" = "exchange_client,right"
+"SUPER+CTRL+k" = "tagtoleft,0"
+"SUPER+CTRL+j" = "tagtoright,0"
+"SUPER+CTRL+h" = "exchange_client,left"
+"SUPER+CTRL+l" = "exchange_client,right"
+
+# Resize floating window
+"CTRL+ALT+Up" = "resizewin,+0,-50"
+"CTRL+ALT+Down" = "resizewin,+0,+50"
+"CTRL+ALT+Left" = "resizewin,-50,+0"
+"CTRL+ALT+Right" = "resizewin,+50,+0"
+
+# ------------------------------------------------------------
+# niri-style app launchers & tools
+# ------------------------------------------------------------
+
+# DMS clipboard
+"SUPER+v" = "spawn_shell,dms ipc clipboard open"
+
+# Color picker
+"SUPER+F1" = "spawn,hyprpicker -a"
+
+# Toggle waybar
+"SUPER+F12" = "spawn_shell,pgrep waybar && pkill waybar || waybar"
+
+# Toggle sunshine
+"SUPER+F11" = "spawn_shell,systemctl enable --user --now sunshine.service"
+
+# Toggle kanata
+"SUPER+F10" = "spawn_shell,if pgrep -x kanata > /dev/null; then pkill -x kanata; else kanata & notify-send 'Kanata' 'Kanata start'; fi"
+
+# Toggle dms
+"SUPER+F9" = "spawn_shell,pgrep dms && dms kill || dms run"
+
+# DMS lock
+"SUPER+ALT+L" = "spawn_shell,dms ipc lock lock"
+
+# Wlogout
+"SUPER+X" = "spawn,wlogout"
+
+# Cycle proportion presets
+"ALT+x" = "switch_proportion_preset"
+# NOTE: In the original conf, SUPER+r was bound twice (reload_config and
+# switch_proportion_preset) which is a config error. reload_config is kept
+# on SUPER+r above; switch_proportion_preset stays on ALT+x only.
+
+# ------------------------------------------------------------
+# Audio
+# ------------------------------------------------------------
+
+"XF86AudioRaiseVolume" = "spawn,wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.05+"
+"XF86AudioLowerVolume" = "spawn,wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.05-"
+"XF86AudioMute" = "spawn,wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
+"XF86AudioMicMute" = "spawn,wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"
+
+# Brightness
+"XF86MonBrightnessUp" = "spawn,brightnessctl --class=backlight set +10%"
+"XF86MonBrightnessDown" = "spawn,brightnessctl --class=backlight set 10%-"
+"CTRL+XF86AudioRaiseVolume" = "spawn,brightnessctl --class=backlight set +10%"
+"CTRL+XF86AudioLowerVolume" = "spawn,brightnessctl --class=backlight set 10%-"
+
+# Media controls
+"CTRL+ALT+P" = "spawn_shell,playerctl play-pause --player=splayer"
+"CTRL+ALT+0" = "spawn_shell,playerctl next --player=splayer"
+"CTRL+ALT+9" = "spawn_shell,playerctl previous --player=splayer"
+
+# Screenshot
+"Print" = "spawn_shell,grim ~/Pictures/Screenshots/$(date +%Y-%m-%d_%H-%M-%S).png"
+"CTRL+Print" = "spawn_shell,grim -g \"$(slurp)\" ~/Pictures/Screenshots/$(date +%Y-%m-%d_%H-%M-%S).png"
+"ALT+Print" = "spawn_shell,grim -g \"$(slurp -o)\" ~/Pictures/Screenshots/$(date +%Y-%m-%d_%H-%M-%S).png"
+
+# ============================================================
+# Mouse Button Bindings
+# ============================================================
+
+[mousebind.default]
+"SUPER+btn_left" = "moveresize,curmove"
+"btn_middle" = "togglemaximizescreen,0"
+"SUPER+btn_right" = "moveresize,curresize"
+
+# ============================================================
+# Axis Bindings (niri style)
+# ============================================================
+
+[axisbind.default]
+"SUPER+UP" = "focusdir,left"
+"SUPER+DOWN" = "focusdir,right"
+"SUPER+SHIFT+UP" = "viewtoleft_have_client"
+"SUPER+SHIFT+DOWN" = "viewtoright_have_client"
+"SUPER+CTRL+UP" = "exchange_client,left"
+"SUPER+CTRL+DOWN" = "exchange_client,right"
