@@ -4,7 +4,19 @@
 
 (defalias
   caps_fn (layer-toggle fn_layer)
-  slsh_num (tap-hold 200 500 / (layer-toggle num_layer))
+  slsh_num (tap-hold 0 200 / (layer-toggle num_layer))
+
+  esc_mouse (tap-hold 0 200 esc (layer-while-held mouse_layer))
+
+  mwu (mwheel-up    50 20)
+  mwd (mwheel-down  50 20)
+  mwl (mwheel-left  50 20)
+  mwr (mwheel-right 50 20)
+
+  msl (movemouse-accel-left  1 400 1 3)
+  msd (movemouse-accel-down  1 400 1 3)
+  msu (movemouse-accel-up    1 400 1 3)
+  msr (movemouse-accel-right 1 400 1 3)
 )
 
 (defsrc
@@ -17,7 +29,7 @@
 )
 
 (deflayer default
-  esc
+  @esc_mouse
   grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
   tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
   @caps_fn a  s  d    f    g    h    j    k    l    ;    '    ret
@@ -41,4 +53,13 @@
   _    1    2    3    4    9    _    9    _    0    _    _    _
   bspc 5    6    7    8    _    _    _    _    _    _    _
   _    _    _              0              _    _    _
+)
+
+(deflayer mouse_layer
+  XX
+  _    _    _    _    _    _    _    _    _    _    _    _    _    _
+  _    _    _    _    _    _    _    @mwd @mwu _    _    _    _    _
+  _    _    _    _    _    _    @msl @msd @msu @msr mmid _    _
+  _    _    _    _    _    _    @mwl @mwr mlft mrgt XX   _
+  _    _    _              mlft           _    _    _
 )
