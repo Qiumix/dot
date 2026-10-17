@@ -1,0 +1,6 @@
+[Service]
+Environment=PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin
+Type=simple
+ExecStart=/usr/sbin/kanata --cfg %h/.config/kanata/kanata.kbd --no-wait
+Restart=on-failure
+RestartSec=3
