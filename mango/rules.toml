@@ -1,0 +1,95 @@
+# ============================================================
+# Window Rules (migrated from niri)
+# ============================================================
+
+# Open maximized for specific apps
+[[rule.window_rule]]
+is_floating = 0
+app_id = "floorp"
+
+[[rule.window_rule]]
+is_floating = 0
+app_id = "mpv"
+
+[[rule.window_rule]]
+is_floating = 0
+app_id = "swayimg"
+
+[[rule.window_rule]]
+is_floating = 0
+app_id = "gamescope"
+
+[[rule.window_rule]]
+is_floating = 0
+app_id = "org.pipewire.Helvum"
+
+[[rule.window_rule]]
+is_floating = 0
+app_id = "code"
+
+[[rule.window_rule]]
+is_floating = 0
+app_id = "ONLYOFFICE"
+
+[[rule.window_rule]]
+is_floating = 0
+app_id = "jetbrains-idea"
+
+[[rule.window_rule]]
+is_floating = 0
+app_id = "Moonlight"
+
+[[rule.window_rule]]
+is_floating = 0
+app_id = "Emacs"
+
+[[rule.window_rule]]
+is_floating = 0
+app_id = "OBS"
+
+[[rule.window_rule]]
+is_floating = 0
+app_id = "calibre-gui"
+
+[[rule.window_rule]]
+is_floating = 0
+app_id = "calibre-ebook-viewer"
+
+[[rule.window_rule]]
+is_floating = 0
+title = "另存为"
+
+# Open maximized for media/gaming apps
+[[rule.window_rule]]
+is_floating = 0
+app_id = "yesplaymusic"
+
+[[rule.window_rule]]
+is_floating = 0
+app_id = "QQ"
+
+[[rule.window_rule]]
+is_floating = 0
+app_id = "wechat"
+
+[[rule.window_rule]]
+is_floating = 0
+app_id = "SPlayer"
+
+[[rule.window_rule]]
+is_floating = 0
+app_id = "chromium"
+
+[[rule.window_rule]]
+is_floating = 0
+app_id = "helium"
+
+# Flameshot floating
+[[rule.window_rule]]
+is_floating = 1
+app_id = "flameshot"
+
+# Show the key floating with custom size
+[[rule.window_rule]]
+is_floating = 1
+app_id = "showmethekey-gtk"

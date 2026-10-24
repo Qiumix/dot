@@ -1,0 +1,65 @@
+#:schema https://yazi-rs.github.io/schemas/yazi.json
+[mgr]
+  show_hidden  = true
+  show_symlink = true
+  sort_by      = "natural"
+
+[opener]
+  edit = [{ run = "$EDITOR %s", desc = "$EDITOR", block = true, for = "unix" }]
+  exif_show = [
+    { run = "exiftool-rs %s; echo 'Press enter to exit'; read _", block = true, desc = "Show EXIF", for = "unix" },
+  ]
+  extract = [{ run = "unar %s", desc = "Extract here", for = "unix" }]
+  haruna = [{ run = "haruna %s &>/dev/null &" }]
+  play = [{ run = "mpv --loop-file=no %s &>/dev/null &" }]
+  pw-play = [{ run = "pw-play %s" }]
+  sqlite = [{ run = "litecli %s", desc = "litecli for sqlite", block = true }]
+  xdg-open = [
+    { run = "xdg-open %s1", desc = "xdg-open", block = false, for = "linux" },
+  ]
+
+[open]
+  prepend_rules = [
+    { url = "*.{wav}", use = "pw-play" },
+    { url = "*.{db}", use = "sqlite" },
+    { url = "*.{epub}", use = "xdg-open" },
+    { url = "*.{md,xhtml,html,kdl}", use = "edit" },
+    { url = "*.{mkv,mp4}", use = "haruna" },
+  ]
+
+[preview]
+  cache_dir     = ""
+  image_filter  = "triangle"
+  image_quality = 90
+  max_height    = 2000
+  max_width     = 2000
+  tab_size      = 4
+
+[plugin]
+  prepend_preloaders = [
+    { mime = "application/{subrip,postscript,illustrator,dvb.ait,vnd.adobe.illustrator,eps}", run = "mediainfo" },
+    { url = "*.{ai,eps,ait}", run = "mediainfo" },
+    { url = "*.{csv,tsv,parquet,xlsx}", run = "duckdb" },
+  ]
+
+  prepend_previewers = [
+    { mime = "application/{subrip,postscript,illustrator,dvb.ait,vnd.adobe.illustrator,eps}", run = "mediainfo" },
+    { mime = "{audio,video,image}/*", run = "mediainfo" },
+
+    { url = "*.{ai,eps,ait}", run = "mediainfo" },
+    { url = "*.{csv,tsv,parquet,xlsx}", run = "duckdb" },
+    # { url = '*.{otf,ttf,woff,woff2}', run = 'font-sample' },
+    { url = '*.typ', run = 'preview-typst' },
+
+    # piper
+    { mime = "application/sqlite3", run = 'piper -- sqlite3 "$1" ".schema --indent" | bat --language sql --color=always --style=plain' },
+    { url = "*.{html,xhtml}", run = 'piper -- bat -p --color=always "$1"' },
+    { url = "*.md", run = 'piper -- CLICOLOR_FORCE=1 glow -w=$w -s=dark "$1"' },
+    { url = "*/", run = 'piper -- eza -a -TL=2 --color=always --icons=always --group-directories-first --no-quotes "$1"' },
+  ]
+
+  prepend_fetchers = [
+    { group = "git", run = "git", url = "*" },
+    { group = "git", run = "git", url = "*/" },
+    { url = "*/", run = "repo-status", group = "repo-status" },
+  ]

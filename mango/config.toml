@@ -1,0 +1,31 @@
+[global]
+
+# Misc
+no_border_when_single = 1
+axis_bind_apply_timeout = 100
+focus_on_activate = 1
+idle_inhibit_ignore_visible = 0
+sloppy_focus = 1
+warp_cursor = 0
+cursor_hide_timeout = 15
+focus_cross_monitor = 0
+focus_cross_tag = 0
+enable_floating_snap = 0
+snap_distance = 30
+cursor_size = 20
+cursor_theme = "Bibata-Modern-Ice"
+drag_tile_to_tile = 1
+xwayland_persistence = 0
+sync_obj_enable = 1
+
+# Sub configs
+source = [
+  "~/.config/mango/appearance.toml",
+  "~/.config/mango/bind.toml",
+  "~/.config/mango/env.toml",
+  "~/.config/mango/exec.toml",
+  "~/.config/mango/input.toml",
+  "~/.config/mango/layout.toml",
+  "~/.config/mango/monitors.toml",
+  "~/.config/mango/rules.toml",
+]

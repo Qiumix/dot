@@ -1,0 +1,11 @@
+[[tasks]]
+type = "Roguelike"
+
+[tasks.params]
+mode = 0
+theme = "BlackFlow"
+squad = "远程战术分队"
+roles = "稳扎稳打"
+core_char = "维什戴尔"
+stop_at_max_level = true
+investment_enabled = true

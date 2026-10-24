@@ -1,0 +1,15 @@
+[Unit]
+Description=bar-rs status bar for niri
+After=niri.service
+PartOf=niri.service
+
+[Service]
+Type=simple
+ExecStart=%h/.local/bin/bar-rs-daemon
+Environment=RUST_BACKTRACE=full
+Environment=XDG_CONFIG_HOME=%h/.config
+Restart=on-failure
+RestartSec=2
+
+[Install]
+WantedBy=niri.service

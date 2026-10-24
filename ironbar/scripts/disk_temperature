@@ -1,0 +1,9 @@
+#!/usr/bin/env fish
+
+sensors -j | jq -r '
+  .["nvme-pci-0500"]
+  | with_entries(select(.key == "Composite" or .key == "Sensor 1"))
+  | map_values(with_entries(select(.key | endswith("_input"))))
+  | [.[] | to_entries[] | (.value * 100 | round) / 100]
+  | join(" | ")
+'

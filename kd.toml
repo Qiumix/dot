@@ -1,0 +1,13 @@
+paging = false
+pager_command = "bat"
+english_only = false
+theme = "temp"
+clear_screen = false
+freq_alert = false
+
+[logging]
+enable = true
+path = ""
+level = "warn"
+stderr = false
+redirect_to_stream = false

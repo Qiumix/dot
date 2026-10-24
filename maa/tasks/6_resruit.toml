@@ -1,0 +1,11 @@
+[[tasks]]
+type = "Recruit"
+
+[tasks.params]
+refresh = true
+times = 4      #100
+# expedite = true
+select = [4, 5]
+confirm = [3, 4, 5]
+skip_robot = false
+recruitment_time = { '3' = 540, '4' = 540, '5' = 540 }

@@ -1,0 +1,11 @@
+[[tasks]]
+type = "Roguelike"
+
+[tasks.params]
+mode = 7
+theme = "Phantom"
+squad = "指挥分队"
+# roles = "稳扎稳打"
+core_char = "维什戴尔"
+deep_exploration_auto_iterate = true
+monthly_squad_auto_iterate = true

@@ -1,0 +1,124 @@
+[global]
+
+# Scroller Layout (niri-style column layout)
+scroller_structs = 3
+scroller_default_proportion = 0.5
+scroller_focus_center = 0
+scroller_prefer_center = 0
+scroller_prefer_overspread = 1
+edge_scroller_pointer_focus = 0
+scroller_default_proportion_single = 1.0
+scroller_proportion_preset = [0.33333, 0.5, 0.66667]
+
+# Master-Stack Layout
+new_is_master = 1
+default_master_factor = 0.55
+default_master_count = 1
+smart_gaps = 0
+
+# Overview
+hotarea_size = 10
+enable_hotarea = 1
+# ov_tab_mode was removed in mango 0.16 and has no replacement; dropped.
+overview_gap_inner = 5
+overview_gap_outer = 30
+
+# ------------------------------------------------------------
+# Layout per tag (all scroller to match niri's column layout)
+# ------------------------------------------------------------
+
+[[rule.tag_rule]]
+id = 1
+layout_name = "scroller"
+
+[[rule.tag_rule]]
+id = 2
+layout_name = "scroller"
+
+[[rule.tag_rule]]
+id = 3
+layout_name = "scroller"
+
+[[rule.tag_rule]]
+id = 4
+layout_name = "scroller"
+
+[[rule.tag_rule]]
+id = 5
+layout_name = "scroller"
+
+[[rule.tag_rule]]
+id = 6
+layout_name = "scroller"
+
+[[rule.tag_rule]]
+id = 7
+layout_name = "scroller"
+
+[[rule.tag_rule]]
+id = 8
+layout_name = "scroller"
+
+[[rule.tag_rule]]
+id = 9
+layout_name = "scroller"
+
+[[rule.tag_rule]]
+id = 10
+layout_name = "scroller"
+
+[[rule.tag_rule]]
+id = 11
+layout_name = "scroller"
+
+[[rule.tag_rule]]
+id = 12
+layout_name = "scroller"
+
+[[rule.tag_rule]]
+id = 13
+layout_name = "scroller"
+
+[[rule.tag_rule]]
+id = 14
+layout_name = "scroller"
+
+[[rule.tag_rule]]
+id = 15
+layout_name = "scroller"
+
+[[rule.tag_rule]]
+id = 16
+layout_name = "scroller"
+
+[[rule.tag_rule]]
+id = 17
+layout_name = "scroller"
+
+[[rule.tag_rule]]
+id = 18
+layout_name = "scroller"
+
+[[rule.tag_rule]]
+id = 19
+layout_name = "scroller"
+
+# ------------------------------------------------------------
+# Layer rules
+# ------------------------------------------------------------
+
+[[rule.layer_rule]]
+animation_type_open = "zoom"
+layer_name = "rofi"
+
+[[rule.layer_rule]]
+animation_type_close = "zoom"
+layer_name = "rofi"
+
+[[rule.layer_rule]]
+animation_type_open = "zoom"
+layer_name = "fozzel"
+
+[[rule.layer_rule]]
+animation_type_close = "zoom"
+layer_name = "fozzel"

@@ -1,0 +1,17 @@
+{
+  "$schema": "https://raw.githubusercontent.com/EmmyLuaLs/emmylua-analyzer-rust/refs/heads/main/crates/emmylua_code_analysis/resources/schema.json",
+  "diagnostics": {
+    "disable": ["unresolved-require"],
+    "enables": [],
+    "globals": [],
+    "globalsRegex": []
+  },
+  "runtime": {
+    "requirePattern": [],
+    "version": "LuaJIT"
+  },
+  "workspace": {
+    "ignoreGlobs": [],
+    "library": ["~/.config/yazi/plugins/types.yazi"]
+  }
+}

@@ -1,0 +1,127 @@
+[[plugin.deps]]
+use = "ciarandg/cd-git-root"
+rev = "a0e0f4b"
+hash = "b84a85f3b513bd9c0a0ab93cc7c8e4c3"
+
+[[plugin.deps]]
+use = "KKV9/compress"
+rev = "80e5268"
+hash = "868db729374b97871bc30b96d0e9061f"
+
+[[plugin.deps]]
+use = "Rolv-Apneseth/starship"
+rev = "ea92cf4"
+hash = "9776f378459072b6c2875eae5addc49d"
+
+[[plugin.deps]]
+use = "yazi-rs/plugins:full-border"
+rev = "e0bbd20"
+hash = "17ebde15c4349f90aedbc45984b98db2"
+
+[[plugin.deps]]
+use = "yazi-rs/plugins:git"
+rev = "e0bbd20"
+hash = "347cc6b190eb0c2fd60513cc7ae37412"
+
+[[plugin.deps]]
+use = "yazi-rs/plugins:piper"
+rev = "e0bbd20"
+hash = "d1e0499cae5f3aeb628c267616d4b682"
+
+[[plugin.deps]]
+use = "yazi-rs/plugins:zoom"
+rev = "e0bbd20"
+hash = "558bbb58e3dd36d488280a8f10e7b904"
+
+[[plugin.deps]]
+use = "AleMenon/exiftool"
+rev = "4c35573"
+hash = "44ef03e4d7151fa4094dd6b87a553033"
+
+[[plugin.deps]]
+use = "yazi-rs/plugins:chmod"
+rev = "e0bbd20"
+hash = "87472b05a8c420100f6a2b9cde1e7746"
+
+[[plugin.deps]]
+use = "Lil-Dank/lazygit"
+rev = "e73fd74"
+hash = "6ea5f37c7f219671ec504cb8311f889d"
+
+[[plugin.deps]]
+use = "aresler/path-from-root"
+rev = "3daa62f"
+hash = "f3375d21ceb5f49d2d50ad199262006a"
+
+[[plugin.deps]]
+use = "shafayetejaman/sduf"
+rev = "f43ba4a"
+hash = "5f9b8fcd37fc225437a213c9674a0ffa"
+
+[[plugin.deps]]
+use = "AnirudhG07/archivemount"
+rev = "f5c5c5c"
+hash = "89487f3b53bdf605e990a9575ec244d5"
+
+[[plugin.deps]]
+use = "boydaihungst/mediainfo"
+rev = "f1cec0b"
+hash = "fd9312e974c63438b1f8737711462d52"
+
+[[plugin.deps]]
+use = "wylie102/duckdb"
+rev = "3f8c863"
+hash = "87b9233a74325e95011670ed20bbd0d4"
+
+[[plugin.deps]]
+use = "skylightlim/gridview"
+rev = "4c7a2b1"
+hash = "3ccce349df27e8ce5ededc3395d2235b"
+
+[[plugin.deps]]
+use = "AminurAlam/yazi-plugins:preview-typst"
+rev = "72bdb41"
+hash = "b51195fb14479a22751230b638830097"
+
+[[plugin.deps]]
+use = "atareao/convert"
+rev = "ce060d9"
+hash = "1c0465351f2a344e842f065ab316f265"
+
+[[plugin.deps]]
+use = "lpanebr/yazi-plugins:first-non-directory"
+rev = "ea50bee"
+hash = "cfc60cfcc554a59f87122246d03f7e11"
+
+[[plugin.deps]]
+use = "lpnh/fr"
+rev = "aa88cd4"
+hash = "8b0e87c3176e0d44f79a8656f79f0fa"
+
+[[plugin.deps]]
+use = "yazi-rs/plugins:types"
+rev = "e0bbd20"
+hash = "d368d5a6a72657e1c0e7ee7340dcea8c"
+
+[[plugin.deps]]
+use = "yazi-rs/plugins:toggle-pane"
+rev = "e0bbd20"
+hash = "5b2fbef7d1513ce38ff72623a071a5e"
+
+[[plugin.deps]]
+use = "Ape/open-with-cmd"
+rev = "56705e2"
+hash = "7c84fff414a652c86c44523dbb08026f"
+
+[[plugin.deps]]
+use = "hankertrix/augment-command"
+rev = "561f6ec"
+hash = "38b093d444efe1386e0e959aa5be11f8"
+
+[[plugin.deps]]
+use = "ThomasVanRiel/repo-status"
+rev = "2b3ef8b"
+hash = "28fd4e30ed2aaf2e2bbabe38a22c67d0"
+
+[flavor]
+deps = []

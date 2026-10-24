@@ -1,0 +1,5 @@
+[font]
+normal = { family = "Maple Mono NF CN", style = "W300" }
+hinting = "slight"
+edging = "subpixelantialias"
+size = 16.0

@@ -1,0 +1,17 @@
+include = ["keymap.toml", "package.toml", "theme.toml", "yazi.toml"]
+
+[formatting]
+  align_comments        = true
+  align_entries         = true
+  align_single_comments = true
+  array_auto_collapse   = false
+  array_auto_expand     = true
+  column_width          = 130
+  compact_inline_tables = false
+  indent_entries        = true
+  inline_table_expand   = true
+  reorder_arrays        = false
+  reorder_keys          = true
+
+[schema]
+  path = "taplo://taplo.toml"

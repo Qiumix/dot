@@ -1,0 +1,6 @@
+hl.bind(mk({ mod }, "T"), spawn("foot"), { repeating = false })
+hl.bind(mk({ mod, sh }, "T"), spawn("kitty -1"), { repeating = false })
+hl.bind(mk({ mod }, "D"), spawn("fuzzel"), {})
+hl.bind(mk({ mod, sh }, "D"), spawn("darkman toggle"), {})
+hl.bind(mk({ mod }, "V"), spawn("cliphist-fuzzel-img"), {})
+hl.bind(mk({ mod }, "F1"), spawn("hyprpicker -a"), {})

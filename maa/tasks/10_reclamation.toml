@@ -1,0 +1,6 @@
+[[tasks]]
+type = "Reclamation"
+
+[tasks.params]
+theme = "RelaunchAnchor"
+mode = 16

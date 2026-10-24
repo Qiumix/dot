@@ -1,0 +1,11 @@
+require("stuff.global")
+require("stuff.plugins")
+
+require("stuff.env")
+require("stuff.output")
+require("stuff.input")
+require("stuff.config")
+require("stuff.bind")
+require("stuff.spawn")
+require("stuff.animation")
+require("stuff.windows")

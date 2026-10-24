@@ -1,0 +1,57 @@
+{
+  "disable_ai": true,
+  "edit_predictions": {
+    "allow_data_collection": "no"
+  },
+  "project_panel": {
+    "dock": "left"
+  },
+  "outline_panel": {
+    "dock": "left"
+  },
+  "collaboration_panel": {
+    "dock": "left"
+  },
+  "git_panel": {
+    "dock": "left"
+  },
+  "which_key": {
+    "enabled": true
+  },
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false
+  },
+  "session": {
+    "trust_all_worktrees": true
+  },
+  "helix_mode": true,
+  "base_keymap": "VSCode",
+  "icon_theme": {
+    "mode": "dark",
+    "light": "Zed (Default)",
+    "dark": "Zed (Default)"
+  },
+  "ui_font_size": 16,
+  "buffer_font_size": 15,
+  "ui_font_family": "Maple Mono NF CN",
+  "buffer_font_family": "Maple Mono NF CN",
+  "theme": {
+    "mode": "dark",
+    "light": "Gruvbox Light",
+    "dark": "Gruvbox Dark"
+  },
+  "agent": {
+    "threads_sidebar": {
+      "auto_open": false
+    },
+    "dock": "right",
+    "favorite_models": [],
+    "model_parameters": []
+  },
+  "agent_servers": {
+    "antigravity-acp": {
+      "type": "registry"
+    }
+  }
+}

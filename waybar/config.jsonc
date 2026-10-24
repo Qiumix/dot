@@ -1,0 +1,243 @@
+{
+  "layer": "top",
+  "position": "top",
+  "reload_style_on_change": true,
+  "mod": "dock",
+  "exclusive": true,
+  "passthrough": false,
+  "gtk-layer-shell": true,
+  "height": 14,
+  "modules-left": [
+    "clock",
+    "niri/window",
+    "custom/music"
+  ],
+  "modules-center": [
+    "niri/workspaces"
+  ],
+  "modules-right": [
+    "cpu",
+    "memory",
+    "temperature",
+    "battery",
+    "network",
+    "bluetooth",
+    "backlight",
+    "pulseaudio",
+    "pulseaudio#microphone",
+    "custom/recorder",
+    "tray"
+  ],
+  "clock": {
+    "format": "{:%H:%M:%S}  ",
+    "format-alt": "{:%A, %B %d, %Y (%H:%M:%S)}",
+    "tooltip-format": "<tt><small>{calendar}</small></tt>",
+    "interval": 1,
+    "calendar": {
+      "format": {
+        "months": "<span color='#cdd6f4'><b>{}</b></span>",
+        "days": "<span color='#b4befe'><b>{}</b></span>",
+        "weeks": "<span color='#a6e3a1'><b>W{}</b></span>",
+        "weekdays": "<span color='#fab387'><b>{}</b></span>",
+        "today": "<span color='#f38ba8'><b><u>{}</u></b></span>"
+      }
+    }
+  },
+  "niri/workspaces": {
+    "active-only": false,
+    "all-outputs": true,
+    "show-special": true,
+    "format": "{icon}",
+    "format-icons": {
+      "1": "󰣇",
+      "2": "",
+      "3": "",
+      "4": "",
+      "5": "",
+      "6": "",
+      "7": "",
+      "8": "",
+      "9": "",
+      "10": "",
+      "11": "",
+      "12": "",
+      "13": "",
+      "14": "",
+      "15": "",
+      "16": "",
+      "17": "󰖳",
+      "18": "",
+      "19": "󰀵",
+      "20": "",
+      "default": ""
+    },
+    "sort-by-number": true,
+    "on-click": "activate",
+    "on-scroll-up": "hyprctl dispatch workspace e+1",
+    "on-scroll-down": "hyprctl dispatch workspace e-1"
+  },
+
+  "niri/window": {
+    "format": "{}",
+    "rewrite": {
+      "(.*) - Google Chrome": "  - $1",
+      "(.*) - nvim": "  - $1",
+      "(.*) - Floorp": "  - $1",
+      "(.*) - Visual Studio Code": "  - $1",
+      "(.*) - Thunar": "󰉓  - $1",
+      "(.*) - Microsoft Edge": "󰇩  - $1",
+      "(.*) - mpv": "  - $1",
+      "Telegram .*": "  - Telegram",
+      "Search...": "  - Search"
+    },
+    "separate-outputs": true,
+    "max-length": 40,
+    "swap-icon-label": false
+  },
+
+  "custom/music": {
+    "format": "{}",
+    "return-type": "json",
+    "max-length": 40,
+    "format-icons": {
+      "Playing": "",
+      "Paused": ""
+    },
+    "exec": "/home/qiumix/.config/waybar/scripts/mediaplayer.py",
+    "on-click": "playerctl play-pause",
+    "on-scroll-up": "playerctl next",
+    "on-scroll-down": "playerctl previous"
+  },
+
+  "cpu": {
+    "format": "󰻠 {usage}%",
+    "format-alt": "󰻠 {avg_frequency} GHz",
+    "interval": 5
+  },
+  "memory": {
+    "format": "󰍛 {}%",
+    "format-alt": "󰍛 {used}/{total} GB",
+    "interval": 10
+  },
+  "temperature": {
+    "critical-threshold": 90,
+    "format-critical": "󰀦 {temperatureC}°C",
+    "format": "{icon} {temperatureC}°C",
+    "format-icons": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "battery": {
+    "states": {
+      "full": 90,
+      "warning": 30,
+      "critical": 20
+    },
+    "format": "{icon} {capacity}%",
+    "format-charging": "󰂄 {capacity}%",
+    "format-plugged": "󰂄 {capacity}%",
+    "format-discharging": "{icon} {capacity}%",
+    "format-full": "{icon} {capacity}%",
+    "format-alt": "{time} {icon}",
+    "format-icons": [
+      "󰂎",
+      "󰁺",
+      "󰁻",
+      "󰁼",
+      "󰁽",
+      "󰁾",
+      "󰁿",
+      "󰂀",
+      "󰂁",
+      "󰂂",
+      "󰁹"
+    ],
+    "events": {
+      "on-discharging-critical": "~/.config/waybar/scripts/battery critical 20",
+      "on-discharging-warning": "~/.config/waybar/scripts/battery warning 30",
+      "on-charging-full": "~/.config/waybar/scripts/battery full 90"
+    }
+  },
+  "network": {
+    "format-wifi": "{icon} {signalStrength}%",
+    "format-ethernet": "{ipaddr}/{cidr}",
+    "tooltip-format": "{essid} - {ifname} via {gwaddr}",
+    "format-linked": "{ifname} (No IP)",
+    "format-disconnected": "Disconnected ⚠",
+    "format-alt": " {bandwidthDownBytes}  {bandwidthUpBytes}",
+    "format-icons": [
+      "󰤯",
+      "󰤟",
+      "󰤢",
+      "󰤥",
+      "󰤨"
+    ],
+    "interval": 5
+  },
+  "bluetooth": {
+    "format": " {status}",
+    "format-off": "",
+    "format-on": "",
+    "format-disabled": "",
+    "format-connected": " {num_connections}",
+    "tooltip-format-connected": "{device_alias}\\t{device_address}\\t{device_battery_percentage}%"
+  },
+  "backlight": {
+    "device": "intel_backlight",
+    "format": "{icon} {percent}%",
+    "format-icons": [
+      "󰃞",
+      "󰃟",
+      "󰃠"
+    ],
+    "on-scroll-up": "brightnessctl set 1%+",
+    "on-scroll-down": "brightnessctl set 1%-",
+    "min-length": 6
+  },
+  "pulseaudio": {
+    "format": "{icon} {volume}%",
+    "tooltip": false,
+    "format-muted": " Muted",
+    "on-click": "pamixer -t",
+    "on-scroll-up": "pamixer -i 5",
+    "on-scroll-down": "pamixer -d 5",
+    "scroll-step": 5,
+    "format-icons": {
+      "headphone": "",
+      "hands-free": "",
+      "headset": "",
+      "phone": "",
+      "portable": "",
+      "car": "",
+      "default": [
+        "",
+        "",
+        ""
+      ]
+    }
+  },
+  "pulseaudio#microphone": {
+    "format": "{format_source}",
+    "format-source": " {volume}%",
+    "format-source-muted": " Muted",
+    "on-click": "pamixer --default-source -t",
+    "on-scroll-up": "pamixer --default-source -i 5",
+    "on-scroll-down": "pamixer --default-source -d 5",
+    "scroll-step": 5
+  },
+  "custom/recorder": {
+    "exec": "~/.config/waybar/scripts/recorder status",
+    "format": "{}",
+    "on-click": "~/.config/waybar/scripts/recorder toggle fullscreen",
+    "on-click-right": "~/.config/waybar/scripts/recorder toggle region",
+    "restart-interval": 1,
+    "return-type": "json",
+    "tooltip": true
+  },
+  "tray": {
+    "icon-size": 20,
+    "spacing": 10
+  }
+}

@@ -1,0 +1,5 @@
+window-rule {
+    match app-id="^org\\.keepassxc\\.KeePassXC$"
+    match app-id="^org\\.gnome\\.World\\.Secrets$"
+    block-out-from "screencast"
+}

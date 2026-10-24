@@ -1,0 +1,90 @@
+# vim:se ft=zsh:
+abbr H='cd ~'
+
+# common alias
+abbr ofc=onlyoffice-desktopeditors
+abbr py=python
+abbr cls=clear
+abbr nv=nvim
+abbr n=nvim
+abbr oc=opencode
+abbr ns=niri-session
+abbr hx=helix
+abbr svim="sudo -E nvim"
+abbr sv="sudo -E nvim"
+abbr nf='nvim $(fzf)'
+abbr np=nvimpager
+abbr lc='nvim leetcode.nvim'
+abbr em='emacs -nw'
+abbr ff=fastfetch
+abbr fcd='cd $(fd --type d --hidden --exclude .git --exclude node_module --exclude .cache --exclude .npm --exclude .meteor --exclude .nv | fzf)'
+abbr ll='eza -alh --icons --git'
+abbr lt='eza --icons --git -T'
+abbr e='eza --icons'
+abbr l='eza --icons'
+abbr k='kd --fzf'
+abbr ks='kd --fzf -s'
+abbr idea=intellij-idea-ultimate-edition
+
+# git command alias
+abbr g=git
+abbr gd='git diff'
+abbr gdh='git diff HEAD'
+abbr gs='git status'
+abbr gsh='git stash'
+abbr gsa='git stash apply'
+abbr gsm='git stash -m'
+abbr gf='git fetch'
+# abbr gl='git log --oneline --graph --decorate --all'
+abbr gl=tig
+abbr gcl='git clone'
+abbr gcls='git clone --single-branch --depth 1'
+abbr gac='git add . and git commit -m'
+abbr ga='git add'
+abbr ga. 'git add .'
+abbr gb='git branch'
+abbr gr='git remote'
+abbr gre='git reset'
+abbr grh='git reset --hard'
+abbr gbr='git branch -r'
+abbr gch='git checkout'
+abbr gcb='git checkout -b'
+abbr lg=lazygit
+abbr lgit=lazygit
+abbr gc='git commit'
+abbr gcm='git commit -m'
+abbr gpl='git pull'
+abbr gpla='git pull --all'
+abbr gp='git push'
+
+# package manager
+abbr P=pacman
+abbr yay=paru
+alias yay=paru
+abbr p=paru
+
+## pacman
+abbr S='sudo pacman -S --needed'
+abbr Sn='sudo pacman -S --needed --noconfirm'
+abbr Ss='pacman -Ss'
+abbr Si='pacman -Si'
+abbr Syu='sudo pacman -Syu --needed'
+abbr Syun='sudo pacman -Syu --needed --noconfirm'
+abbr Syyu='sudo pacman -Syyu --needed'
+abbr Syyun='sudo pacman -Syyu --needed --noconfirm'
+abbr Rns='sudo pacman -Rns'
+abbr Qs='pacman -Qs'
+abbr Qi='pacman -Qi'
+abbr Ql='pacman -Ql'
+abbr Qe='pacman -Qe'
+
+## paru
+abbr pS='paru -S --needed'
+abbr pSs='paru -Ss'
+abbr pSi='paru -Si'
+abbr pRns='paru -Rns'
+abbr pSyu='paru -Syu --needed'
+abbr pSyyu='paru -Syyu --needed'
+abbr pQs='paru -Qs'
+abbr pQi='paru -Qi'
+abbr pQe='paru -Qe'
