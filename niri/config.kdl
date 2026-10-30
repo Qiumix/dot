@@ -8,7 +8,7 @@ include optional=true "./output.kdl"
 include optional=true "./spawn.kdl"
 include optional=true "./touch_pad.kdl"
 include optional=true "./windows/init.kdl"
-screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
+screenshot-path "~/Pictures/Screenshots/%Y-%m-%d_%H-%M-%S.png"
 cursor {
   xcursor-theme "Elaina"
   xcursor-size 24

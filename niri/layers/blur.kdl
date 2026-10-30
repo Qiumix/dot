@@ -1,10 +1,11 @@
 layer-rule {
-    match namespace="^launcher$"
-    match namespace="^bar-rs$"
-    match namespace="^ironbar$"
-    place-within-backdrop false
-    background-effect {
-        xray false
-        blur true
-    }
+  match namespace="^launcher$"
+  match namespace="^bar-rs$"
+  match namespace="^ironbar$"
+  match namespace="^crabbar-primary$"
+  place-within-backdrop false
+  background-effect {
+    xray false
+    blur true
+  }
 }

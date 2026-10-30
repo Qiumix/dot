@@ -1,5 +1,5 @@
 window-rule {
-    match app-id="ONLYOFFICE"
-    opacity 1.0
+  match app-id="ONLYOFFICE"
+  opacity 1.0
 }
 

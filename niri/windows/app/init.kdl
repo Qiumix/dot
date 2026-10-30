@@ -1,3 +1,4 @@
-include optional=true "~/.config/niri/windows/app/splayer.kdl"
-include optional=true "~/.config/niri/windows/app/showmethekey.kdl"
+include optional=true "~/.config/niri/windows/app/horizon.kdl"
 include optional=true "~/.config/niri/windows/app/onlyoffice.kdl"
+include optional=true "~/.config/niri/windows/app/showmethekey.kdl"
+include optional=true "~/.config/niri/windows/app/splayer.kdl"

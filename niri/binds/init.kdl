@@ -5,25 +5,28 @@ include optional=true "~/.config/niri/binds/sys.kdl"
 include optional=true "~/.config/niri/binds/wm.kdl"
 include optional=true "~/.config/niri/binds/workspace.kdl"
 binds {
-    // Key Suggestion
-    Mod+Shift+Slash {
-        show-hotkey-overlay
-    }
-    // Unregister niri to display manage
-    Mod+Shift+E {
-        quit
-    }
-    // Screenshot
-    Print {
-        screenshot-screen
-    }
-    Ctrl+Print {
-        screenshot
-    }
-    Alt+Print {
-        screenshot-window
-    }
-    Mod+Shift+P {
-        power-off-monitors
-    }
+  // Key Suggestion
+  Mod+Shift+Slash {
+    show-hotkey-overlay
+  }
+  // Unregister niri to display manage
+  Mod+Shift+E {
+    quit
+  }
+  // Screenshot
+  Print {
+    screenshot-screen
+  }
+  Mod+Print {
+    screenshot
+  }
+  Alt+Print {
+    screenshot-window
+  }
+  Ctrl+Print {
+    spawn-sh "shot_edit"
+  }
+  Mod+Shift+P {
+    power-off-monitors
+  }
 }
