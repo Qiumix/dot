@@ -10,6 +10,10 @@ __init_tool zoxide init fish
 __init_tool tv init fish
 __init_tool fzf --fish
 __init_tool wasm-tools completion fish
+__init_tool tola completions fish
+__init_tool horizon-launcher completions fish
+__init_tool niri-tracker completions fish
+__init_tool piri completion fish
 
 # yazi begin
 function y

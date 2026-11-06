@@ -7,6 +7,8 @@
     "outputDevice": null,
     "volume": 1,
     "loudnessNormalization": false,
+    "audioOutputMode": "shared",
+    "keepScreenAwake": false,
     "equalizer": {
       "enabled": false,
       "preset": "flat",
@@ -192,6 +194,7 @@
     }
   },
   "plugins": {
+    "permissions": {},
     "enabled": {},
     "priority": {
       "musicUrl": []
@@ -267,6 +270,10 @@
       },
       "view.searchInPage": {
         "inApp": "/",
+        "global": null
+      },
+      "view.openSettings": {
+        "inApp": "CommandOrControl+,",
         "global": null
       }
     }

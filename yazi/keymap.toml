@@ -4,19 +4,31 @@ mgr.prepend_keymap = [
   # ════════════════════════════════════════════════════════════
   #  g: goto location
   # ════════════════════════════════════════════════════════════
+
+  { on = ["g", "e"], run = "arrow bot", desc = "Go to bottom" },
+
   { on = ["g", "b"], run = "plugin trash", desc = "Go to trash bin" },
-  { on = ["g", "D"], run = "cd ~/Documents", desc = "Cd to ~/Documents" },
-  { on = ["g", "d"], run = "cd ~/Downloads", desc = "Cd to ~/Downloads" },
-  { on = ["g", "G"], run = "cd ~/Games", desc = "Cd to ~/Games" },
+  { on = ["g", "D"], run = "cd ~/Documents", desc = "Cd to Documents" },
+  { on = ["g", "d"], run = "cd ~/Downloads", desc = "Cd to Downloads" },
+  { on = ["g", "G"], run = "cd ~/Games", desc = "Cd to Games" },
+  { on = ["g", "j"], run = "plugin first-non-directory", desc = "Jumps to the first file" },
   { on = ["g", "l"], run = "cd ~/.local", desc = "Cd to ~/.local" },
-  { on = ["g", "P"], run = "cd ~/Pictures", desc = "Cd to ~/Pictures" },
-  { on = ["g", "p"], run = "cd ~/Projects", desc = "Cd to ~/Projects" },
+  { on = ["g", "L"], run = "cd ~/.local/share", desc = "Cd to ~/.local/share" },
+  { on = ["g", "p"], run = "cd ~/Projects", desc = "Cd to Projects" },
   { on = ["g", "r"], run = "plugin cd-git-root", desc = "Go to git repo root" },
   { on = ["g", "t"], run = "cd ~/tmp", desc = "Cd to ~/tmp" },
   { on = ["g", "T"], run = "cd /tmp", desc = "Cd to /tmp" },
-  { on = ["g", "v"], run = "cd ~/Videos", desc = "Cd to ~/Videos" },
-  { on = ["g", "j"], run = "plugin first-non-directory", desc = "Jumps to the first file" },
+  { on = ["g", "v"], run = "cd ~/Videos", desc = "Cd to Videos" },
 
+  { on = ["g", "P", "b"], run = "cd ~/Pictures/bg", desc = "Cd to bg" },
+  { on = ["g", "P", "k"], run = "cd ~/Pictures/kwipic", desc = "Cd to kwipic" },
+  { on = ["g", "P", "p"], run = "cd ~/Pictures", desc = "Cd to Pictures" },
+  { on = ["g", "P", "P"], run = "cd ~/Pictures", desc = "Cd to Pictures" },
+  { on = ["g", "P", "s"], run = "cd ~/Pictures/Screenshots", desc = "Cd to Screenshots" },
+
+  { on = ["g", "m"], run = "cd ~/Music", desc = "Cd to Music" },
+  { on = ["g", "n"], run = "cd ~/.config/nvim", desc = "Cd to neovim" },
+  { on = ["g", "y"], run = "cd ~/.config/yazi", desc = "Cd to yazi" },
   # ════════════════════════════════════════════════════════════
   #  c: copy
   # ════════════════════════════════════════════════════════════
@@ -25,6 +37,8 @@ mgr.prepend_keymap = [
   # ════════════════════════════════════════════════════════════
   #  m: misc / external tool
   # ════════════════════════════════════════════════════════════
+  { on = ["m", "t"], run = "shell --block 'tokei; read'", desc = "tokei" },
+
   { on = ["m", "f"], run = "plugin fd", desc = "Search files fd" },
   # { on = ["m", "F"], run = "plugin fd --args '--no-ignore'", desc = "Search files fd(no ignore)" },
   { on = ["m", "r"], run = "plugin rg", desc = "Search files rg" },
@@ -43,12 +57,12 @@ mgr.prepend_keymap = [
   { on = ["m", "v"], run = "plugin gridview", desc = "Grid view" },
   { on = ["m", "x"], run = "shell 'xdg-open %s'", desc = "Open with system app" },
 
-  { on = ["m", "t", "c"], run = "plugin toggle-pane max-current", desc = "Maximize or restore the current pane" },
-  { on = ["m", "t", "C"], run = "plugin toggle-pane min-current", desc = "Show or hide the current pane" },
-  { on = ["m", "t", "p"], run = "plugin toggle-pane max-preview", desc = "Maximize or restore the preview pane" },
-  { on = ["m", "t", "P"], run = "plugin toggle-pane min-preview", desc = "Show or hide the preview pane" },
-  { on = ["m", "t", "r"], run = "plugin toggle-pane max-parent", desc = "Maximize or restore the parent pane" },
-  { on = ["m", "t", "R"], run = "plugin toggle-pane min-parent", desc = "Show or hide the parent pane" },
+  { on = ["m", "T", "c"], run = "plugin toggle-pane max-current", desc = "Maximize or restore the current pane" },
+  { on = ["m", "T", "C"], run = "plugin toggle-pane min-current", desc = "Show or hide the current pane" },
+  { on = ["m", "T", "p"], run = "plugin toggle-pane max-preview", desc = "Maximize or restore the preview pane" },
+  { on = ["m", "T", "P"], run = "plugin toggle-pane min-preview", desc = "Show or hide the preview pane" },
+  { on = ["m", "T", "r"], run = "plugin toggle-pane max-parent", desc = "Maximize or restore the parent pane" },
+  { on = ["m", "T", "R"], run = "plugin toggle-pane min-parent", desc = "Show or hide the parent pane" },
 
   { on = ["m", "c", "j"], run = "plugin convert -- --extension='jpg'", desc = "Convert selected files to JPG" },
   { on = ["m", "c", "p"], run = "plugin convert -- --extension='png'", desc = "Convert selected files to PNG" },
@@ -74,7 +88,6 @@ mgr.prepend_keymap = [
   { on = ["C", "h"], run = "plugin compress -ph", desc = "Archive (password+header)" },
   { on = ["C", "l"], run = "plugin compress -l", desc = "Archive (compression level)" },
   { on = ["C", "p"], run = "plugin compress -p", desc = "Archive (password)" },
-  { on = ["C", "r"], run = "plugin compress '-p -l rar'", desc = "Archive to rar (password+level)" },
   { on = ["C", "u"], run = "plugin compress -phl", desc = "Archive (password+header+level)" },
 
   # ════════════════════════════════════════════════════════════

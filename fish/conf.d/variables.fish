@@ -20,9 +20,9 @@ set -x LS_ICONS "*.kdl="
 # These are loaded by systemd user session and available to all processes.
 # We keep fallbacks here for non-systemd environments or if variables aren't set.
 
-set -q XDG_CONFIG_HOME; or set -xg XDG_CONFIG_HOME $HOME/.config
-set -q XDG_DATA_HOME; or set -xg XDG_DATA_HOME $HOME/.local/share
-set -q XDG_CACHE_HOME; or set -xg XDG_CACHE_HOME $HOME/.cache
-set -q XDG_STATE_HOME; or set -xg XDG_STATE_HOME $HOME/.local/state
-set -q XDG_BIN_HOME; or set -xg XDG_BIN_HOME $HOME/.local/bin
-set -q XDG_RUNTIME_DIR; or set -xg XDG_RUNTIME_DIR /run/user/$(id -u)
+# set -q XDG_CONFIG_HOME; or set -xg XDG_CONFIG_HOME $HOME/.config
+# set -q XDG_DATA_HOME; or set -xg XDG_DATA_HOME $HOME/.local/share
+# set -q XDG_CACHE_HOME; or set -xg XDG_CACHE_HOME $HOME/.cache
+# set -q XDG_STATE_HOME; or set -xg XDG_STATE_HOME $HOME/.local/state
+# set -q XDG_BIN_HOME; or set -xg XDG_BIN_HOME $HOME/.local/bin
+# set -q XDG_RUNTIME_DIR; or set -xg XDG_RUNTIME_DIR /run/user/$(id -u)

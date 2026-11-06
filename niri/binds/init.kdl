@@ -18,13 +18,13 @@ binds {
     screenshot-screen
   }
   Mod+Print {
-    screenshot
+    spawn-sh "shot_edit"
   }
   Alt+Print {
     screenshot-window
   }
   Ctrl+Print {
-    spawn-sh "shot_edit"
+    screenshot
   }
   Mod+Shift+P {
     power-off-monitors

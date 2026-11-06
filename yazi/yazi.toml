@@ -5,7 +5,10 @@
   sort_by      = "natural"
 
 [opener]
-  edit = [{ run = "$EDITOR %s", desc = "$EDITOR", block = true, for = "unix" }]
+  edit = [
+    { run = "$EDITOR %s", desc = "$EDITOR", block = true, for = "unix" },
+    { run = "LSP_DISABLE='true' $EDITOR %s", desc = "$EDITOR no_lsp", block = true, for = "unix" },
+  ]
   exif_show = [
     { run = "exiftool-rs %s; echo 'Press enter to exit'; read _", block = true, desc = "Show EXIF", for = "unix" },
   ]
@@ -20,7 +23,7 @@
 
 [open]
   prepend_rules = [
-    { url = "*.{wav}", use = "pw-play" },
+    { mime = "audio/*", use = "pw-play" },
     { url = "*.{db}", use = "sqlite" },
     { url = "*.{epub}", use = "xdg-open" },
     { url = "*.{md,xhtml,html,kdl}", use = "edit" },
