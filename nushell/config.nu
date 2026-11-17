@@ -34,12 +34,17 @@ $env.config.keybindings ++= [
         mode: [vi_insert]
         event: { send: executehostcommand, cmd: "y" }
     }
+    # Ctrl+U clears the whole current line in every Vi mode. Reedline leaves
+    # Ctrl+U unbound in the Vi modes (Emacs mode keeps its default,
+    # CutFromStart). fish only bound it in insert mode (backward-kill-line);
+    # this binds insert, normal and visual to the whole-buffer `Clear` edit.
+    # Remove `vi_normal` / `vi_visual` from `mode` to restrict it to insert.
     {
-        name: edit_pipe_output
-        modifier: control_shift
-        keycode: char_l
-        mode: [vi_insert]
-        event: { send: executehostcommand, cmd: "nvim -c 'set ft=nushell' /tmp/pipe-output.txt" }
+        name: clear_current_line
+        modifier: control
+        keycode: char_u
+        mode: [vi_insert, vi_normal, vi_visual]
+        event: { edit: Clear }
     }
 ]
 
@@ -79,7 +84,9 @@ $env.config.abbreviations = {
     "em": "emacs -nw"
     "co": "cargo"
     "aria": "aria2c -c -s64 -x16"
-    "ff": "print \"\"; fastfetch --logo-type sixel --logo ~/Pictures/avator/wheel.png"
+    "dae_start": "sudo systemctl start dae.service"
+    "dae_stop": "sudo systemctl stop dae.service"
+    "ff": "print \"\"; fastfetch --logo-type kitty --logo ~/Pictures/avator/wheel.png"
     "idea": "intellij-idea-ultimate-edition"
 
     # eza
@@ -98,7 +105,9 @@ $env.config.abbreviations = {
     "gsm": "git stash -m"
     "grc": "git rm --cached"
     "gf": "git fetch"
-    "gl": "tig --all"
+    # `gl` lives in autoload/commands.nu as a `def --wrapped` command instead of
+    # an abbreviation: fish's `alias gl` carried fixed arguments and accepted
+    # more after them (`gl -p`, `gl --stat`), which an abbreviation cannot do.
     "gcl": "git clone"
     "gcls": "git clone --single-branch --depth 1"
     "gac": "git add .; git commit -m"
@@ -158,10 +167,28 @@ $env.config.abbreviations = {
 alias yay = paru
 
 # ---------------------------------------------------------------------------
-# Notes on deliberately unmigrated fish settings
+# Migration status (fish 4.9.3 -> Nushell 0.116.1)
 # ---------------------------------------------------------------------------
+# Ported from conf.d/tool.fish and conf.d/abbr.fish in this pass:
+# * `fzf --fish | source` -> autoload/fzf.nu (`fzf --nushell`, fzf 0.74.5:
+#   ctrl-t / ctrl-r / alt-c key bindings + `**` external completer).
+# * `tola completions fish | source` -> autoload/tola.nu
+#   (`tola completions nushell`, tola 0.8.1).
+# * `dae_start` / `dae_stop` abbreviations restored.
+# * `alias gl` -> `def --wrapped gl` in autoload/commands.nu: an abbreviation
+#   cannot carry fixed arguments and still accept more after them.
+# * fish completions/ biome, matugen, ruffle and ya -> autoload/completions.nu
+#   (kd was already there; fisher/spark are plugin-manager completions).
+#
+# Deliberately not migrated:
+# * autopair (fisher plugin): Nushell's line editor has no equivalent hook.
+# * fisher / spark: fish plugin management.
+# * zellij / piri / horizon-launcher / niri-tracker: no Nushell completion
+#   generator upstream (zellij rejects `nushell`, the other three emit fish
+#   only).
+# * tv / wasm-tools: not installed here; fish skipped them via `type -q` too.
 # * `fish_config theme choose base16-eighties` (config.fish) never took effect:
 #   fish 4.9.3 resolves it to "unknown color theme" and stored no fish_color_*
 #   universal variables, so Nushell keeps its default color_config.
-# * `fzf --fish | source` and `zellij setup --generate-completion fish` have no
-#   Nushell equivalent (neither tool emits Nushell completions).
+# * `null`: fish's `&>/dev/null &` silences *and* backgrounds; Nushell has no
+#   `&` background operator, so the abbreviation only redirects.
