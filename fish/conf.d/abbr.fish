@@ -8,6 +8,8 @@ abbr -a "....." -- ../../../..
 abbr -a null "&>/dev/null &"
 
 abbr -a spawn "niri msg action spawn-sh --"
+abbr -a L 'export LSP_DISABLE="true"'
+abbr -a RA 'export RA="true"'
 
 # common alias
 abbr -a aria "aria2c -c -s64 -x16"
@@ -76,8 +78,6 @@ alias gl "git log --graph --decorate --all \
 # package manager
 abbr -a P pacman
 abbr -a p paru
-abbr -a yay paru
-alias yay paru
 
 ## pacman
 abbr -a Q 'pacman -Q'

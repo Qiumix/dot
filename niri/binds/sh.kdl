@@ -12,7 +12,7 @@ binds {
     spawn-sh "~/.config/niri/03_scripts/toggle.fish ironbar ironbar"
   }
   Mod+F11 {
-    spawn-sh "~/.config/niri/03_scripts/toggle.fish bar-rs bar-rs open"
+    spawn-sh "~/.config/niri/03_scripts/toggle.fish bar-rs-daemon bar-rs-daemon"
   }
   Mod+F10 {
     spawn-sh "~/.config/niri/03_scripts/toggle.fish kanata kanata"
@@ -22,6 +22,9 @@ binds {
   }
   Mod+F8 {
     spawn-sh "~/.config/niri/03_scripts/toggle.fish showmethekey-gtk showmethekey-gtk -A -k"
+  }
+  Mod+F7 {
+    spawn-sh "~/.config/niri/03_scripts/toggle.fish miru-daemon miru-daemon"
   }
   Mod+Alt+L {
     spawn-sh "hyprlock --config ~/.config/niri/02_misc/hyprlock.conf"

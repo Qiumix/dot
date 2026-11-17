@@ -90,6 +90,12 @@ binds {
   Mod+G {
     toggle-column-tabbed-display
   }
+  Mod+C {
+    center-column
+  }
+  Mod+Z hotkey-overlay-title="toggle miru" {
+    spawn-sh "/usr/bin/miructl toggle"
+  }
   Mod+Return {
     toggle-window-floating
   }

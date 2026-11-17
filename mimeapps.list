@@ -55,7 +55,7 @@ x-scheme-handler/tonsite=userapp-AyuGram Desktop-EFH2Q3.desktop;
 
 [Default Applications]
 application/epub=sioyek.desktop
-application/epub+zip=readest-handler.desktop
+application/epub+zip=sioyek.desktop
 application/javascript=nvim.desktop
 application/json=nvim.desktop
 application/pdf=onlyoffice-desktopeditors.desktop

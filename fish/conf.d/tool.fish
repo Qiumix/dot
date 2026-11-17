@@ -14,6 +14,7 @@ __init_tool tola completions fish
 __init_tool horizon-launcher completions fish
 __init_tool niri-tracker completions fish
 __init_tool piri completion fish
+__init_tool direnv hook fish
 
 # yazi begin
 function y

@@ -3,6 +3,9 @@ binds {
   Mod+Shift+T repeat=false hotkey-overlay-title="Open a Terminal" {
     spawn-sh "foot"
   }
+  Mod+I repeat=false hotkey-overlay-title="floating foot" {
+    spawn-sh "float-foot"
+  }
   Mod+T repeat=false hotkey-overlay-title="Open a Terminal" {
     spawn-sh "kitty -1"
   }

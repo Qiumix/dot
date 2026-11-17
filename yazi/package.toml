@@ -15,22 +15,22 @@ hash = "9776f378459072b6c2875eae5addc49d"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:full-border"
-rev = "e0bbd20"
+rev = "c0529fc"
 hash = "17ebde15c4349f90aedbc45984b98db2"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:git"
-rev = "e0bbd20"
+rev = "c0529fc"
 hash = "347cc6b190eb0c2fd60513cc7ae37412"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:piper"
-rev = "e0bbd20"
+rev = "c0529fc"
 hash = "d1e0499cae5f3aeb628c267616d4b682"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:zoom"
-rev = "e0bbd20"
+rev = "c0529fc"
 hash = "558bbb58e3dd36d488280a8f10e7b904"
 
 [[plugin.deps]]
@@ -40,7 +40,7 @@ hash = "44ef03e4d7151fa4094dd6b87a553033"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:chmod"
-rev = "e0bbd20"
+rev = "c0529fc"
 hash = "87472b05a8c420100f6a2b9cde1e7746"
 
 [[plugin.deps]]
@@ -80,7 +80,7 @@ hash = "3ccce349df27e8ce5ededc3395d2235b"
 
 [[plugin.deps]]
 use = "AminurAlam/yazi-plugins:preview-typst"
-rev = "72bdb41"
+rev = "50d82a7"
 hash = "b51195fb14479a22751230b638830097"
 
 [[plugin.deps]]
@@ -100,12 +100,12 @@ hash = "8b0e87c3176e0d44f79a8656f79f0fa"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:types"
-rev = "e0bbd20"
+rev = "c0529fc"
 hash = "d368d5a6a72657e1c0e7ee7340dcea8c"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:toggle-pane"
-rev = "e0bbd20"
+rev = "c0529fc"
 hash = "5b2fbef7d1513ce38ff72623a071a5e"
 
 [[plugin.deps]]
@@ -115,8 +115,8 @@ hash = "7c84fff414a652c86c44523dbb08026f"
 
 [[plugin.deps]]
 use = "hankertrix/augment-command"
-rev = "561f6ec"
-hash = "38b093d444efe1386e0e959aa5be11f8"
+rev = "6e840cf"
+hash = "a2925aa08a55cf0448ddac7e5ed52e46"
 
 [[plugin.deps]]
 use = "ThomasVanRiel/repo-status"

@@ -16,6 +16,9 @@
   haruna = [{ run = "haruna %s &>/dev/null &" }]
   play = [{ run = "mpv --loop-file=no %s &>/dev/null &" }]
   pw-play = [{ run = "pw-play %s" }]
+  sioyek = [
+    { run = "sioyek %s1", block = false, for = "linux" },
+  ]
   sqlite = [{ run = "litecli %s", desc = "litecli for sqlite", block = true }]
   xdg-open = [
     { run = "xdg-open %s1", desc = "xdg-open", block = false, for = "linux" },
@@ -25,7 +28,7 @@
   prepend_rules = [
     { mime = "audio/*", use = "pw-play" },
     { url = "*.{db}", use = "sqlite" },
-    { url = "*.{epub}", use = "xdg-open" },
+    { url = "*.{epub}", use = "sioyek" },
     { url = "*.{md,xhtml,html,kdl}", use = "edit" },
     { url = "*.{mkv,mp4}", use = "haruna" },
   ]
